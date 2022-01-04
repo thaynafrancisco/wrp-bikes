@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>WRP</title>
+  </head>
+  <body>
+    <style>
+      .nav-tabs {
+        justify-content: center;
+        border-bottom: 1px solid #f3f3f3;
+        background: #f3f3f3;
+      }
+      .bg-nav {
+        background-color: #f3f3f3;
+      }
+      .carousel-indicators [data-bs-target] {
+        background-color: #000;
+        margin-right:0;
+        margin-left:0;
+      }
+      .carousel button.active {
+        background-color: #c50c1c;
+      }
+      a.nav-link.active {
+        background: #c50c1c;
+        border-radius: 8px;
+      }
+      .nav-link {
+          color: #000;
+          font-weight: bold;
+      }
+      .nav-link:hover {
+          color: #000;
+      }
+      .nav-tabs .nav-link.active {
+          color: #000;
+          background-color: #fff;
+          border-color: #fff;
+      }
+      .carousel-control-prev-icon {
+          background-image: url(assets/arrow-left.png);
+      }
+      .carousel-control-next-icon {
+          background-image: url(assets/arrow-right.png);
+      }
+      .representantes .col-lg-3 {
+          border-right: 3px solid #c50c1c;
+      }
+    </style>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-nav">
+      <div class="container">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Produtos</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#">Representantes</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#">Contatos</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#">WRP Connect</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 4"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./assets/carrossel.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/carrossel.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/carrossel.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/carrossel.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/carrossel.png" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- tabs -->
+    <nav>
+      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">TRANSPORTE</button>
+        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">CARGA PESADA</button>
+        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">FULL SUSPENSION</button>
+        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">FREIO A DISCO</button>
+      </div>
+    </nav>
+    <div class="tab-content mb-2" id="nav-tabContent">
+      <div class="container tab-pane fade show active mt-2" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+        <div class="row">
+          <div class="col-lg-4 p-5" style="border: 1px solid black">imagens</div>
+          <div class="col-lg-4 p-5" style="border: 1px solid black">imagens</div>
+          <div class="col-lg-4 p-5" style="border: 1px solid black">imagens</div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 p-5" style="border: 1px solid black">imagens</div>
+          <div class="col-lg-4 p-5" style="border: 1px solid black">imagens</div>
+          <div class="col-lg-4 p-5" style="border: 1px solid black">imagens</div>
+        </div>
+      </div>
+      <div class="container tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">varios cards</div>
+      <div class="container tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">varios cards</div>
+    </div>
+
+    <!-- cards -->
+    <div class="container mt-2">
+      <div class="row">
+        <div class="col-lg-6 p-0">
+          <div id="box1" style="border: 1px solid red;">banner 1</div>
+        </div>
+        <div class="col-lg-3">
+          <div id="box2" style="border: 1px solid red;">banner 2</div>
+          <div id="box3" style="border: 1px solid red;">banner 3</div>
+        </div>
+        <div class="col-lg-3 p-0">
+          <div id="box5" style="border: 1px solid red;">banner 4</div>
+          <div id="box6" style="border: 1px solid red;">banner 5</div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- banner full width -->
+    <div class="container-fluid mt-2" style="padding: 0">
+      <img src="./assets/carrossel.png" alt="" width="100%" height="250px" >
+    </div>
+
+    <div class="container representantes mt-5 mb-5">
+      <h4 class="text-center mb-5">REPRESENTANTES</h4>
+      <div class="row">
+        <div class="col-lg-4">
+          img-do-brasil
+        </div>
+        <div class="col-lg-3">
+          <p>Escolha na lista abaixo o Estado desejado para encontrar nossos Representantes</p>
+          Estado: Cidade de São Paulo
+        </div>
+        <div class="col-lg-5">
+          <p>Cidade de São Paulo, Grande São Paulo e 
+            Vale do Paraíba </p>
+          <p>Daniel Representações</p> 
+          <ul>
+            <li>(11)4970-9645</li>
+            <li>(11)4970-9645(tim)</li>
+            <li>(11)4970-9645(vivo)</li>
+          </ul>
+          <p>daniel_rodrigues@hotmail.com</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid" style="background-color: #f3f3f3;">
+      <div class="container pt-3">
+        <div class="row">
+          <div class="col-lg-6">
+            <h5>NOS ENVIE SUA MENSAGEM</h5>
+            <p>Utilize o formulário abaixo, para nos enviar suas dúvidas,
+              críticas ou sugestões. Aguardamos por você!</p>
+          </div>
+          <div class="col-lg-6">
+            <p>LOGO</p>
+            <p>(11)4970-9645(tim)</p>
+            <p>(11)4970-9645(vivo)</p>
+
+            <p>comercial@wrp.com.br</p> 
+            <p>Rua do Aluminio, 59 - Bairro Corredor</p>
+            <p>Itaquaquecetuba - São Paulo</p>
+            <p>CEP: 08566-220</p>
+
+          </div>
+        </div>
+      </div>      
+    </div>
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
