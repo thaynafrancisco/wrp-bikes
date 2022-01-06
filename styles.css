@@ -1,0 +1,130 @@
+    body {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .nav-tabs {
+        justify-content: center;
+        border-bottom: 1px solid #f3f3f3;
+        background: #f3f3f3;
+    }
+
+    .bg-nav {
+        background-color: #f3f3f3;
+    }
+
+    .carousel-indicators [data-bs-target] {
+        background-color: #000;
+        margin-right:0;
+        margin-left:0;
+    }
+
+    .carousel button.active {
+        background-color: #c50c1c;
+    }
+
+    a.nav-link.active {
+        background: #c50c1c;
+        border-radius: 0 0 8px 8px;
+    }
+    .nav-link {
+        color: #000;
+    }
+    li.nav-item a {
+        font-weight: 500;
+    }
+    li.nav-item {
+        padding: 0 8px;
+    }
+    .nav-link:hover {
+        color: #000;
+    }
+    .nav-tabs .nav-link.active {
+        color: #000!important;
+        background-color: #fff;
+        border-color: #fff;
+    }
+    .nav-tabs button {
+        color: #000;
+        font-weight: bold;
+    }
+    .carousel-control-prev-icon {
+        background-image: url(assets/arrow-left.png)!important;
+    }
+    .carousel-control-next-icon {
+        background-image: url(assets/arrow-right.png)!important;
+    }
+    .representantes .col-lg-3 {
+        border-right: 3px solid #c50c1c;
+    }
+    .representantes img {
+        display: flex;
+        margin: 0 auto;
+    }
+    a.navbar-brand {
+        background-image: url(assets/logo.png);
+        background-size: cover;
+        width: 100px;
+        height: 35px;
+        margin: 7px;
+    }
+    .navbar-light .navbar-nav .nav-link {
+    color: #333;
+    }
+    .celack p, .informations p {
+    margin: 0;
+    }
+    .img-cards img {
+    width: 100%;
+    }
+    span.bike-name {
+    font-weight: 500;
+    } 
+    a.saiba-mais {
+    float: right;
+    color: #c50c1c;
+    font-weight: 500;
+    text-decoration: none;
+    }
+    button#nav-carga-tab:nth-of-type(2),
+    button#nav-suspension-tab:nth-of-type(3) {
+    border-right: 2px solid #c50c1c;
+    border-radius: 0;
+    margin: 4px 0;
+    }
+    .nav-tabs .carousel-control-next-icon {
+    margin: 8px 0;
+    }
+
+
+    /* form */
+    form input {
+        margin: 4px 0;
+    }
+    input#cidade {
+    float: left;
+    width: 75%;
+    }
+    input#uf {
+    float: right;
+    width: 20%;
+    }
+    input#celular {
+    float: left;
+    width: 49%;
+    }
+    input#whatsapp {
+    float: right;
+    width: 49%;
+    }
+    button.btn.btn-primary {
+    background: #c50c1c;
+    border: transparent;
+    }
+    /* form */
+
+    /* On screens that are 600px or less, set the background color to olive */
+    @media screen and (max-width: 600px) {
+        .mtmob-3 {
+            margin-top: 1rem;
+        }
+    }

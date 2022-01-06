@@ -8,6 +8,9 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/favicon.ico">
 
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
@@ -19,117 +22,6 @@
     <title>WRP</title>
   </head>
   <body>
-    <style>
-      body {
-        font-family: 'Montserrat', sans-serif;
-      }
-      .nav-tabs {
-        justify-content: center;
-        border-bottom: 1px solid #f3f3f3;
-        background: #f3f3f3;
-      }
-      .bg-nav {
-        background-color: #f3f3f3;
-      }
-      .carousel-indicators [data-bs-target] {
-        background-color: #000;
-        margin-right:0;
-        margin-left:0;
-      }
-      .carousel button.active {
-        background-color: #c50c1c;
-      }
-      a.nav-link.active {
-        background: #c50c1c;
-        border-radius: 0 0 8px 8px;
-      }
-      .nav-link {
-          color: #000;
-      }
-      li.nav-item a {
-          font-weight: 500;
-      }
-      li.nav-item {
-          padding: 0 8px;
-      }
-      .nav-link:hover {
-          color: #000;
-      }
-      .nav-tabs .nav-link.active {
-          color: #000;
-          background-color: #fff;
-          border-color: #fff;
-      }
-      .carousel-control-prev-icon {
-          background-image: url(assets/arrow-left.png);
-      }
-      .carousel-control-next-icon {
-          background-image: url(assets/arrow-right.png);
-      }
-      .representantes .col-lg-3 {
-          border-right: 3px solid #c50c1c;
-      }
-      .representantes img {
-          display: flex;
-          margin: 0 auto;
-      }
-      a.navbar-brand {
-        background-image: url(assets/logo.png);
-        background-size: cover;
-        width: 100px;
-        height: 35px;
-        margin: 7px;
-      }
-      .navbar-light .navbar-nav .nav-link {
-        color: #333;
-      }
-      .celack p, .informations p {
-        margin: 0;
-      }
-      .img-cards img {
-        width: 100%;
-      }
-      span.saiba-mais {
-        float: right;
-        color: #c50c1c;
-        font-weight: 500;
-      }
-      button#nav-carga-tab:nth-of-type(2),
-      button#nav-suspension-tab:nth-of-type(3) {
-        border-right: 2px solid #c50c1c;
-        border-radius: 0;
-        margin: 4px 0;
-      }
-      .nav-tabs .carousel-control-next-icon {
-        margin: 8px 0;
-      }
-
-      /* form */
-      input {
-        margin: 4px 0;
-      }
-      input#cidade {
-        float: left;
-        width: 75%;
-      }
-      input#uf {
-        float: right;
-        width: 20%;
-      }
-      input#celular {
-        float: left;
-        width: 49%;
-      }
-      input#whatsapp {
-        float: right;
-        width: 49%;
-      }
-      button.btn.btn-primary {
-        background: #c50c1c;
-        border: transparent;
-      }
-    </style>
-
     <nav class="navbar navbar-expand-lg navbar-light bg-nav">
       <div class="container">
         <a class="navbar-brand" href="#"></a>
@@ -151,7 +43,7 @@
               <a class="nav-link" href="#contatos">Contatos</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link" href="http://www.wrp.ind.br/bikes/paginas/index.php">WRP Connect <span class="wrp-icon"><img src="assets/wrp-connect.png" alt=""></span></a>
+              <a class="nav-link" target="_blank" href="http://www.wrp.ind.br/bikes/paginas/index.php">WRP Connect <span class="wrp-icon"><img src="assets/wrp-connect.png" alt=""></span></a>
             </li>
           </ul>
         </div>
@@ -200,6 +92,7 @@
         <button class="nav-link" id="nav-carga-tab" data-bs-toggle="tab" data-bs-target="#nav-carga" type="button" role="tab" aria-controls="nav-carga" aria-selected="false">CARGA PESADA</button>
         <button class="nav-link" id="nav-suspension-tab" data-bs-toggle="tab" data-bs-target="#nav-suspension" type="button" role="tab" aria-controls="nav-suspension" aria-selected="false">FULL SUSPENSION</button>
         <button class="nav-link" id="nav-freio-tab" data-bs-toggle="tab" data-bs-target="#nav-freio" type="button" role="tab" aria-controls="nav-freio" aria-selected="false">FREIO A DISCO</button>
+        <button class="nav-link" id="nav-extra-tab" data-bs-toggle="tab" data-bs-target="#nav-extra" type="button" role="tab" aria-controls="nav-extra" aria-selected="false">CONTEUDO EXTRA</button>
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
       </div>
     </nav>
@@ -209,43 +102,38 @@
           <div class="col-lg-4 p-5">
             <img src="assets/genova-teen.png" alt="">
             <span class="bike-name">GENOVA TEEN</span>
-            <span class="saiba-mais">[+] Saiba Mais</span>
+            <a href="paginadoproduto.html" class="saiba-mais">[+] Saiba Mais</a>
           </div>
           <div class="col-lg-4 p-5">
             <img src="assets/genova-26.png" alt="">
             <span class="bike-name">GENOVA 26</span>
-            <span class="saiba-mais">[+] Saiba Mais</span>
+            <a href="paginadoproduto.html" class="saiba-mais">[+] Saiba Mais</a>
           </div>
           <div class="col-lg-4 p-5">
             <img src="assets/malaga.png" alt="">
             <span class="bike-name">MALAGA</span>
-            <span class="saiba-mais">[+] Saiba Mais</span>
+            <a href="paginadoproduto.html" class="saiba-mais">[+] Saiba Mais</a>
           </div>
         </div>
         <div class="row">
           <div class="col-lg-4 p-5">
             <img src="assets/genova-teen.png" alt="">
             <span class="bike-name">GENOVA TEEN</span>
-            <span class="saiba-mais">[+] Saiba Mais</span>
+            <a href="paginadoproduto.html" class="saiba-mais">[+] Saiba Mais</a>
           </div>
           <div class="col-lg-4 p-5">
             <img src="assets/genova-26.png" alt="">
             <span class="bike-name">GENOVA 26</span>
-            <span class="saiba-mais">[+] Saiba Mais</span>
+            <a href="paginadoproduto.html" class="saiba-mais">[+] Saiba Mais</a>
           </div>
           <div class="col-lg-4 p-5">
             <img src="assets/malaga.png" alt="">
             <span class="bike-name">MALAGA</span>
-            <span class="saiba-mais">[+] Saiba Mais</span>
+            <a href="paginadoproduto.html" class="saiba-mais">[+] Saiba Mais</a>
           </div>
         </div>
       </div>
       <div class="container tab-pane fade mt-2" id="nav-carga" role="tabpanel" aria-labelledby="nav-carga-tab">
-        <div class="row">
-          <div class="col-lg-4 p-5" style="border: 1px solid black">imagens</div>
-          <div class="col-lg-4 p-5" style="border: 1px solid black">imagens</div>
-          <div class="col-lg-4 p-5" style="border: 1px solid black">imagens</div>
-        </div>
         <div class="row">
           <div class="col-lg-4 p-5" style="border: 1px solid black">imagens</div>
           <div class="col-lg-4 p-5" style="border: 1px solid black">imagens</div>
@@ -258,11 +146,6 @@
           <div class="col-lg-4 p-5" style="border: 1px solid black">imagens</div>
           <div class="col-lg-4 p-5" style="border: 1px solid black">imagens</div>
         </div>
-        <div class="row">
-          <div class="col-lg-4 p-5" style="border: 1px solid black">imagens</div>
-          <div class="col-lg-4 p-5" style="border: 1px solid black">imagens</div>
-          <div class="col-lg-4 p-5" style="border: 1px solid black">imagens</div>
-        </div>
       </div>
       <div class="container tab-pane fade mt-2" id="nav-freio" role="tabpanel" aria-labelledby="nav-freio-tab">
         <div class="row">
@@ -270,44 +153,46 @@
           <div class="col-lg-4 p-5" style="border: 1px solid black">imagens</div>
           <div class="col-lg-4 p-5" style="border: 1px solid black">imagens</div>
         </div>
-        <div class="row">
-          <div class="col-lg-4 p-5" style="border: 1px solid black">imagens</div>
-          <div class="col-lg-4 p-5" style="border: 1px solid black">imagens</div>
-          <div class="col-lg-4 p-5" style="border: 1px solid black">imagens</div>
-        </div>
+      </div>
+      <div class="container tab-pane fade mt-2" id="nav-extra" role="tabpanel" aria-labelledby="nav-extra-tab">
+        conteudo extra aqui
       </div>
     </div>
 
     <!-- cards -->
-    <!-- <div class="container mt-5 mb-5 img-cards">
+    <div class="container mt-5 mb-5 img-cards">
+
       <div class="row">
-        <div class="col-lg-4 p-0">
+
+        <div class="col-lg-4">
           <div id="box1">
             <img src="assets/bikes-montadas.png" alt="">
           </div>
         </div>
-        <div class="col-lg-4">
-          <div id="box2" class="mb-3">
+
+        <div class="col-lg-4 pr-0">
+          <div id="box2" class="mb-3 mtmob-3">
             <img src="assets/garfos.png" alt="">
           </div>
           <div id="box3">
             <img src="assets/suportes.png" alt="">
           </div>
         </div>
-        <div class="col-lg-4 p-0">
-          <div id="box5" class="mb-3">
+        
+        <div class="col-lg-4 pl-0">
+          <div id="box2" class="mb-3 mtmob-3">
             <img src="assets/quadros.png" alt="">
           </div>
-          <div id="box6">
+          <div id="box3">
             <img src="assets/paralamas.png" alt="">
           </div>
         </div>
-      </div>
-    </div> -->
 
+      </div>
+    </div>
 
     <!-- banner full width -->
-    <div class="container-fluid mt-5 mb-5" style="padding: 0">
+    <div class="container-fluid mt-5 mb-5 p-0">
       <img src="./assets/Banner-Representantes-V1.png" alt="" width="100%">
     </div>
 
@@ -364,11 +249,11 @@
       </div>
     </div>
 
-    <footer id="contatos">
-      <div class="container-fluid pb-5 pt-5" style="background-color: #f3f3f3;">
+    <footer id="contatos" class="pt-3 pb-3" style="background-color: #f3f3f3;">
+      <div class="container-fluid pb-5 pt-5">
         <div class="container pt-3">
           <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6 mb-5">
               <h5>NOS ENVIE SUA MENSAGEM</h5>
               <p>Utilize o formulário abaixo, para nos enviar suas dúvidas,
                 críticas ou sugestões. Aguardamos por você!</p>
@@ -382,11 +267,11 @@
                   <input type="text" class="form-control" id="whatsapp" placeholder="WhatsApp">
                   <input type="email" class="form-control" id="email" placeholder="Email">
                   <input type="text" class="form-control" id="mensagem" placeholder="Mensagem">
-                  <button type="submit" class="btn btn-primary">Enviar</button>
-                  </form>
+                  <button type="submit" class="btn btn-primary mt-2">Enviar</button>
+                </form>
             </div>
             <div class="col-lg-6">
-              <img src="assets/logo.png" alt="" width="20%" class="mb-2">
+              <img src="assets/logo.png" alt="" width="20%" class="mb-4">
               <div class="informations mb-2">
                 <p>(11) 4970-9645(tim)</p>
                 <p>(11) 4970-9645(vivo)</p>
