@@ -13,7 +13,7 @@
     }
 
     .carousel-indicators [data-bs-target] {
-        background-color: #000;
+        background-color: #000!important;
         margin-right:0;
         margin-left:0;
     }
