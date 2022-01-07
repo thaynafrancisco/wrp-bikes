@@ -19,6 +19,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 
+    <!-- Fliper -->
+    <link rel="stylesheet" href="./dist/jquery.flipster.min.css">
+    <script src="./dist/jquery.min.js"></script>
+    <script src="./dist/jquery.flipster.min.js"></script>
+
     <title>WRP</title>
   </head>
   <body>
@@ -49,33 +54,60 @@
         </div>
       </div>
     </nav>
-    
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <!-- carousel -->
+    <div class="container-fluid p-4">
+      <!-- style="background-color: #f3f3f3;" -->
+      <div class="row">
+          <div class="col-lg-12">
+              <div id="flat">
+                  <ul>
+                      <li>
+                          <a class="img-box lightbox inner" href="#"></a> 
+                              <span>
+                                  <img alt="" src="http://www.framework-y.com/images/thumb-large.png">
+                              </span>
+                          </a>
+                      </li>
+                      <li>
+                          <a class="img-box lightbox inner" href="#"></a> 
+                              <span>
+                                  <img alt="" src="http://www.framework-y.com/images/thumb-large.png">
+                              </span>
+                          </a>
+                      </li>
+                      <li>
+                          <a class="img-box lightbox inner" href="#"></a> 
+                              <span>
+                                  <img alt="" src="http://www.framework-y.com/images/thumb-large.png">
+                              </span>
+                          </a>
+                      </li>
+                      <li>
+                          <a class="img-box lightbox inner" href="#"></a> 
+                              <span>
+                                  <img alt="" src="http://www.framework-y.com/images/thumb-large.png">
+                              </span>
+                          </a>
+                      </li>
+                      <li>
+                          <a class="img-box lightbox inner" href="#"></a> 
+                              <span>
+                                  <img alt="" src="http://www.framework-y.com/images/thumb-large.png">
+                              </span>
+                          </a>
+                      </li>
+                      <li>
+                          <a class="img-box lightbox inner" href="#"></a> 
+                              <span>
+                                  <img alt="" src="http://www.framework-y.com/images/thumb-large.png">
+                              </span>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
       </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="./assets/carrossel.png" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="./assets/carrossel.png" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="./assets/carrossel.png" class="d-block w-100" alt="...">
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
+  </div>
 
     <!-- tabs -->
     <nav>
@@ -385,8 +417,14 @@
       </div>
     </footer>
 
-    <!-- Optional JavaScript; choose one of the two! -->
-
+    <script>
+      var flat = $("#flat").flipster({
+          style: 'flat',
+          spacing: -0.38,
+          buttons: true,
+          nav: true
+      });
+  </script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>

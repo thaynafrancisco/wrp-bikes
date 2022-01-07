@@ -1,5 +1,6 @@
     body {
         font-family: 'Montserrat', sans-serif;
+        overflow-x: hidden;
     }
     .navbar {
         padding-top: 0!important;
@@ -156,3 +157,24 @@
     }
     /* form */
 
+    /* carousel */
+    .flipster__item__content span img {
+        width: 85%;
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .flipster {
+        overflow-x: inherit!important;
+    }
+
+    .flipster__nav {
+        position: absolute;
+        bottom: 60px;
+        z-index: 999;
+        margin-left: 42%!important;
+    }
+    
+    a.flipster__nav__link {
+        color: transparent;
+    }
