@@ -65,8 +65,8 @@
     a.navbar-brand {
         background-image: url(assets/logo.png);
         background-size: cover;
-        width: 100px;
-        height: 35px;
+        width: 150px;
+        height: 50px;
         margin: 7px;
     }
     .navbar-light .navbar-nav .nav-link {
@@ -158,19 +158,12 @@
     /* form */
 
     /* carousel */
-    .flipster__item__content span img {
-        width: 85%;
-        display: flex;
-        margin: 0 auto;
-    }
-
     .flipster {
         overflow-x: inherit!important;
     }
-
     .flipster__nav {
         position: absolute;
-        bottom: 60px;
+        bottom: -2rem!important;
         z-index: 999;
         margin-left: 42%!important;
     }
@@ -178,3 +171,37 @@
     a.flipster__nav__link {
         color: transparent;
     }
+    .carousel-fliper {
+        padding-bottom: 5rem;
+    }
+    li.flipster__nav__item.flipster__nav__item--current:after {
+        content: "";
+        width: 50px;
+        background: #c50c1c;
+        height: 5px;
+        display: block;
+        position: absolute;
+        bottom: 5px;
+    } 
+
+    /* democss */
+    .flipster__item.flipster__item--current img {
+        width: 100%;
+    }
+    .flipster--flat .flipster__item--past .flipster__item__content,
+    .flipster--flat .flipster__item--future .flipster__item__content {
+        -webkit-transform: scale(.20);
+        -ms-transform: scale(.20);
+        transform: scale(0.20);
+        transition: all 400ms ease-out;
+        position: relative;
+        margin-bottom: -20%;
+    }
+    .flipster--flat .flipster__item--current .flipster__item__content {
+        transition: all 400ms ease-in;
+    }
+    .flipster--flat .flipster__item--past, 
+    .flipster--flat .flipster__item--future {
+        opacity: 1;
+    }
+  
