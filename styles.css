@@ -1,27 +1,28 @@
     body {
         font-family: 'Montserrat', sans-serif;
     }
-
+    .navbar {
+        padding-top: 0!important;
+    }
+    div#navbarSupportedContent {
+        margin-top: -10px;
+    }
     .nav-tabs {
         justify-content: center;
         border-bottom: 1px solid #f3f3f3;
         background: #f3f3f3;
     }
-
     .bg-nav {
         background-color: #f3f3f3;
     }
-
     .carousel-indicators [data-bs-target] {
         background-color: #000!important;
-        margin-right:0;
-        margin-left:0;
+        margin-right:0!important;
+        margin-left:0!important;
     }
-
     .carousel button.active {
-        background-color: #c50c1c;
+        background-color: #c50c1c!important;
     }
-
     a.nav-link.active {
         background: #c50c1c;
         border-radius: 0 0 8px 8px;
@@ -36,7 +37,7 @@
         padding: 0 8px;
     }
     .nav-link:hover {
-        color: #000;
+        color: #000!important;
     }
     .nav-tabs .nav-link.active {
         color: #000!important;
@@ -68,63 +69,78 @@
         margin: 7px;
     }
     .navbar-light .navbar-nav .nav-link {
-    color: #333;
+        color: #333;
     }
-    .celack p, .informations p {
-    margin: 0;
+    .celack p, .informations p, .address p {
+        margin: 0;
+    }
+    .informations p, p.medium {
+        font-weight: 500;
     }
     .img-cards img {
-    width: 100%;
+        width: 100%;
     }
     span.bike-name {
-    font-weight: 500;
+        font-weight: 500;
     } 
     a.saiba-mais {
-    float: right;
-    color: #c50c1c;
-    font-weight: 500;
-    text-decoration: none;
+        float: right;
+        color: #c50c1c;
+        font-weight: 500;
+        text-decoration: none;
     }
     button#nav-carga-tab:nth-of-type(2),
     button#nav-suspension-tab:nth-of-type(3) {
-    border-right: 2px solid #c50c1c;
-    border-radius: 0;
-    margin: 4px 0;
+        border-right: 2px solid #c50c1c;
+        border-radius: 0;
     }
     .nav-tabs .carousel-control-next-icon {
-    margin: 8px 0;
+        margin: 8px 0;
     }
-
+    .carousel {
+        background: #f3f3f3;
+    }
+    .text-white:hover {
+        color: #fff!important;
+    }
+    .mb-custom {
+        margin-bottom: 12px;
+    }
+    
+    /* On screens that are 600px or less, set the background color to olive */
+    @media screen and (max-width: 600px) {
+        .mtmob-3 {
+            margin-top: 1rem;
+        }
+        .navbar {
+            padding-top: inherit;
+            margin: inherit;
+        }
+    }
 
     /* form */
     form input {
         margin: 4px 0;
     }
     input#cidade {
-    float: left;
-    width: 75%;
+        float: left;
+        width: 75%;
     }
     input#uf {
-    float: right;
-    width: 20%;
+        float: right;
+        width: 20%;
     }
     input#celular {
-    float: left;
-    width: 49%;
+        float: left;
+        width: 49%;
     }
     input#whatsapp {
-    float: right;
-    width: 49%;
+        float: right;
+        width: 49%;
     }
     button.btn.btn-primary {
-    background: #c50c1c;
-    border: transparent;
+        background: #c50c1c;
+        border: transparent;
     }
     /* form */
 
-    /* On screens that are 600px or less, set the background color to olive */
-    @media screen and (max-width: 600px) {
-        .mtmob-3 {
-            margin-top: 1rem;
-        }
-    }
