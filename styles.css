@@ -108,6 +108,13 @@
     .mb-custom {
         margin-bottom: 12px;
     }
+    .desktop {
+        display: block;
+    }
+    .mobile {
+        display: none;
+    }
+
 
     /* On screens that are 600px or less, set the background color to olive */
     @media screen and (max-width: 600px) {
@@ -128,6 +135,12 @@
             background: #c50c1c;
             border-radius: 4px;
             padding: 8px;
+        }
+        .desktop {
+            display: none;
+        }
+        .mobile {
+            display: block;
         }
     }
 
@@ -205,3 +218,60 @@
         opacity: 1;
     }
   
+
+    /* tabs */
+    .scrtabs-tab-scroll-arrow.scrtabs-tab-scroll-arrow-left:before {
+        content: "<";
+        font-size: 20px;
+        line-height: 1;
+        color: #000;
+        font-weight: bold;
+      }
+      .scrtabs-tab-scroll-arrow.scrtabs-tab-scroll-arrow-right:before {
+          content: ">";
+          font-size: 20px;
+          line-height: 1;
+          color: #000;
+          font-weight: bold;
+      }
+      a.nav-link {
+        color: #000;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+      .nav-tabs {
+        background-color: #f3f3f3;
+      }
+      .scrtabs-tab-container {
+        height: 55px;
+        padding-top: 2rem;
+        background: #f3f3f3;
+      }
+      .scrtabs-tab-scroll-arrow.scrtabs-tab-scroll-arrow-left, .scrtabs-tab-scroll-arrow.scrtabs-tab-scroll-arrow-right {
+        background: #f3f3f3;
+        border: 0;
+      }
+      .nav-tabs .nav-link.active {
+        color: #000!important;
+      }
+      ul.nav-tabs li a.nav-link {
+        border-right: 2px solid red;
+        border-radius: 0;
+      }
+      .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+        color: #333;
+        border-right: 2px solid red!important;
+      }
+      .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+        border-color: transparent!important;
+      }
+      .nav-tabs {
+        overflow-x: auto;
+       overflow-y: hidden;
+       display: -webkit-box;  
+       display: -moz-box;   
+      }
+      .nav-tabs>li {
+         float:none;
+       }
+      
