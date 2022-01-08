@@ -74,7 +74,10 @@
         margin: 7px;
     }
     .navbar-light .navbar-nav .nav-link {
-        color: #333;
+        color: #000!important;
+    }
+    a.nav-link.active.text-white.waves-effect.waves-light {
+        color: #fff!important;
     }
     .celack p, .informations p, .address p {
         margin: 0;
