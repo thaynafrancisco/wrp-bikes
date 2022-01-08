@@ -234,10 +234,6 @@ li.flipster__nav__item.flipster__nav__item--current:after {
     line-height: 0;
     color: #000;
     font-weight: bold;
-    margin-right: 40px!Important;
-    float: left;
-    position: absolute;
-    left: 25%;
 }
 .scrtabs-tab-scroll-arrow.scrtabs-tab-scroll-arrow-right:before {
     content: ">";
