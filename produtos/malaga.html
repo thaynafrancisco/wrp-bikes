@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Favicon -->
+      <link rel="icon" type="image/png" href="../../assets/favicon.ico">
+      
+      <!-- CSS -->
+      <link rel="stylesheet" href="../styles/styles.css">
+      <link rel="stylesheet" href="../styles/colors.css">
+      
+      <!-- Bootstrap CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      
+      <!-- Font Montserrat -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+      
+      <!-- Fliper -->
+      <link rel="stylesheet" href="../dist/jquery.flipster.min.css">
+      <script src="../dist/jquery.min.js"></script>
+      <script src="../dist/jquery.flipster.min.js"></script>
+
+      <!-- Scrolling Tabs -->
+      <link rel="stylesheet" href="../dist/jquery.scrolling-tabs.min.css">
+      <script src="../dist/jquery.scrolling-tabs.min.js"></script>
+      <title>WRP</title>
+   </head>
+   <body>
+      <nav class="navbar navbar-expand-lg navbar-light bg-nav">
+         <div class="container">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                     <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="../produtos.html">Produtos</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#representantes">Representantes</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#contatos">Contatos</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" target="_blank" href="http://www.wrp.ind.br/bikes/paginas/index.php">WRP Connect <span class="wrp-icon"><img src="../../assets/wrp-connect.png" alt=""></span></a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+
+      <!-- breadcrumb -->
+      <section id="breadcrumb">
+         <div class="container">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+               <ol class="breadcrumb mb-0">
+                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                 <li class="breadcrumb-item"><a href="produtos.html">Produtos</a></li>
+                 <li class="breadcrumb-item"><a href="#">Transporte</a></li>
+                 <li class="breadcrumb-item active" aria-current="page">Malaga</li>
+               </ol>
+             </nav>
+         </div>
+      </section>
+
+      <!-- detalhes do produto -->
+      <section id="detalhes-produto">
+         <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-lg-10">
+                  <div class="d-flex align-items-start">
+                      <div class="nav flex-column nav-pills align-middle mr-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <button class="nav-link active" id="v-pills-foto1-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                            <img src="../assets/foto-pequena.png" alt="">
+                        </button>
+                        <button class="nav-link" id="v-pills-foto2-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                          <img src="../assets/foto-pequena.png" alt="">
+                        </button>
+         
+                      </div>
+                      <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-foto1-tab">
+                            <img src="../assets/produto-selecionado.png" alt="">
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-foto2-tab">
+                          <img src="../assets/produto-selecionado.png" alt="">
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-foto3-tab">
+                          <img src="../assets/produto-selecionado.png" alt="">
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-foto4-tab">
+                          <img src="../assets/produto-selecionado.png" alt="">
+                        </div>
+                        <div class="container product-details p-4">
+                           <div class="row">
+                              <div class="col-lg-6">
+                                 <h1>Malaga</h1>
+                                 <h5 class="text-red">Linha Transporte</h5>
+                                 <span><span class="text-bold">CATEGORIA:</span> ADULTO</span>
+                                 <span><span class="text-bold">ARO:</span> 26</span>
+                                 <span><span class="text-bold">MOVIMENTO CENTRAL:</span> 45,5 MM</span>
+                                 <span><span class="text-bold">MOVIMENTO DE DIREÇÃO:</span> STANDARD</span>
+                                 <span><span class="text-bold">MONTAGEM DE RODAS:</span> 26 X 1,1/2" X 2"</span>
+                                 <span><span class="text-bold">QUADRO EM AÇO CARBONO:</span> 26 X 1,1/2" X 2"</span>
+                                 <span><span class="text-bold">FREIO:</span> V-BRAKE, CANTILEVER, VARÃO E CONTRA PEDAL</span> 
+                              </div>
+                              <div class="col-lg-6">
+                                 <span><b>Tabela de Cores</b></span>
+                                 <ul class="colors-group list-unstyled">
+                                    <li><span class="pink"></span></li>
+                                    <li><span class="pink-and-black"></span></li>
+                                    <li><span class="red-and-black"></span></li>
+                                    <li><span class="violet"></span></li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+            <!-- TABS -->
+            <div class="container-fluid" style="background-color: #f3f3f3;">
+               <div class="row justify-content-md-center">
+                     <div class="multi-carousel col-lg-7">
+                        <!-- Tabs navs -->
+                        <!--  d-block for showing tabs in carousel with fixed width,  d-md-flex to show all tabs on specific viewport  -->
+                        <ul class="multi-carousel-inner nav nav-tabs mb-3  d-block d-md-flex" id="ex1" role="tablist">
+                           <li class="nav-item multi-carousel-item" role="presentation">
+                              <a
+                                 class="nav-link active"
+                                 id="ex1-tab-1"
+                                 data-toggle="tab"
+                                 href="#ex1-tabs-1"
+                                 role="tab"
+                                 aria-controls="ex1-tabs-1"
+                                 aria-selected="true"
+                                 >TRANSPORTE</a>
+                           </li>
+                           <li class="nav-item  multi-carousel-item" role="presentation">
+                              <a
+                                 class="nav-link"
+                                 id="ex1-tab-2"
+                                 data-toggle="tab"
+                                 href="#ex1-tabs-2"
+                                 role="tab"
+                                 aria-controls="ex1-tabs-2"
+                                 aria-selected="false"
+                                 >CARGA PESADA</a>
+                           </li>
+                           <li class="nav-item multi-carousel-item" role="presentation">
+                              <a
+                                 class="nav-link"
+                                 id="ex1-tab-3"
+                                 data-toggle="tab"
+                                 href="#ex1-tabs-3"
+                                 role="tab"
+                                 aria-controls="ex1-tabs-3"
+                                 aria-selected="false"
+                                 >FULL SUSPENSION</a>
+                           </li>
+                           <li class="nav-item multi-carousel-item" role="presentation">
+                              <a
+                                 class="nav-link"
+                                 id="ex1-tab-1"
+                                 data-toggle="tab"
+                                 href="#ex1-tabs-4"
+                                 role="tab"
+                                 aria-controls="ex1-tabs-4"
+                                 aria-selected="true"
+                                 >FREIO A DISCO</a>
+                           </li>
+                           <li class="nav-item multi-carousel-item" role="presentation">
+                              <a
+                                 class="nav-link"
+                                 id="ex1-tab-2"
+                                 data-toggle="tab"
+                                 href="#ex1-tabs-5"
+                                 role="tab"
+                                 aria-controls="ex1-tabs-5"
+                                 aria-selected="false"
+                                 >Tab 5</a>
+                           </li>
+                           <li class="nav-item multi-carousel-item" role="presentation">
+                              <a
+                                 class="nav-link"
+                                 id="ex1-tab-3"
+                                 data-toggle="tab"
+                                 href="#ex1-tabs-6"
+                                 role="tab"
+                                 aria-controls="ex1-tabs-6"
+                                 aria-selected="false"
+                                 >Tab 6</a>
+                           </li>
+                        </ul>
+                        <!-- Tabs navs -->
+                        <!--  d-md-none to disable controls on non mobile viewports -->
+                        <a class="carousel-control-prev d-md-none" tabindex="0" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </a>
+                        <a class="carousel-control-next d-md-none" tabindex="0" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </a>
+                     </div>
+                     
+                     <!-- Tabs content -->
+                     <div class="tab-content" id="ex1-content">
+                        <div class="container tab-pane fade show active" id="ex1-tabs-1" role="tabpanel" aria-labelledby="ex1-tab-1">
+                           <div class="row">
+                              <div class="col-lg-4 p-5">
+                                 <img src="../assets/genova-teen.png" alt="">
+                                 <span class="bike-name">GENOVA TEEN</span>
+                                 <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                              </div>
+                              <div class="col-lg-4 p-5">
+                                 <img src="../assets/genova-26.png" alt="">
+                                 <span class="bike-name">GENOVA 26</span>
+                                 <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                              </div>
+                              <div class="col-lg-4 p-5">
+                                 <img src="../assets/malaga.png" alt="">
+                                 <span class="bike-name">MALAGA</span>
+                                 <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-lg-4 p-5">
+                                 <img src="../assets/genova-teen.png" alt="">
+                                 <span class="bike-name">GENOVA TEEN</span>
+                                 <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                              </div>
+                              <div class="col-lg-4 p-5">
+                                 <img src="../assets/genova-26.png" alt="">
+                                 <span class="bike-name">GENOVA 26</span>
+                                 <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                              </div>
+                              <div class="col-lg-4 p-5">
+                                 <img src="../assets/malaga.png" alt="">
+                                 <span class="bike-name">MALAGA</span>
+                                 <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="container tab-pane fade" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
+                           <div class="row">
+                              <div class="col-lg-4 p-5">
+                                 <img src="../assets/genova-teen.png" alt="">
+                                 <span class="bike-name">GENOVA TEEN</span>
+                                 <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                              </div>
+                              <div class="col-lg-4 p-5">
+                                 <img src="../assets/genova-26.png" alt="">
+                                 <span class="bike-name">GENOVA 26</span>
+                                 <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                              </div>
+                              <div class="col-lg-4 p-5">
+                                 <img src="../assets/malaga.png" alt="">
+                                 <span class="bike-name">MALAGA</span>
+                                 <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-lg-4 p-5">
+                                 <img src="../assets/genova-teen.png" alt="">
+                                 <span class="bike-name">GENOVA TEEN</span>
+                                 <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                              </div>
+                              <div class="col-lg-4 p-5">
+                                 <img src="../assets/genova-26.png" alt="">
+                                 <span class="bike-name">GENOVA 26</span>
+                                 <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                              </div>
+                              <div class="col-lg-4 p-5">
+                                 <img src="../assets/malaga.png" alt="">
+                                 <span class="bike-name">MALAGA</span>
+                                 <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="container tab-pane fade" id="ex1-tabs-3" role="tabpanel" aria-labelledby="ex1-tab-3">
+                           <div class="row">
+                              <div class="col-lg-4 p-5">
+                                 <img src="../assets/genova-teen.png" alt="">
+                                 <span class="bike-name">GENOVA TEEN</span>
+                                 <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                              </div>
+                              <div class="col-lg-4 p-5">
+                                 <img src="../assets/genova-26.png" alt="">
+                                 <span class="bike-name">GENOVA 26</span>
+                                 <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                              </div>
+                              <div class="col-lg-4 p-5">
+                                 <img src="../assets/malaga.png" alt="">
+                                 <span class="bike-name">MALAGA</span>
+                                 <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-lg-4 p-5">
+                                 <img src="../assets/genova-teen.png" alt="">
+                                 <span class="bike-name">GENOVA TEEN</span>
+                                 <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                              </div>
+                              <div class="col-lg-4 p-5">
+                                 <img src="../assets/genova-26.png" alt="">
+                                 <span class="bike-name">GENOVA 26</span>
+                                 <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                              </div>
+                              <div class="col-lg-4 p-5">
+                                 <img src="../assets/malaga.png" alt="">
+                                 <span class="bike-name">MALAGA</span>
+                                 <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="container tab-pane fade" id="ex1-tabs-4" role="tabpanel" aria-labelledby="ex1-tab-4">
+                           <div class="row">
+                              <div class="col-lg-4 p-5">
+                                 <img src="../assets/genova-teen.png" alt="">
+                                 <span class="bike-name">GENOVA TEEN</span>
+                                 <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                              </div>
+                              <div class="col-lg-4 p-5">
+                                 <img src="../assets/genova-26.png" alt="">
+                                 <span class="bike-name">GENOVA 26</span>
+                                 <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                              </div>
+                              <div class="col-lg-4 p-5">
+                                 <img src="../assets/malaga.png" alt="">
+                                 <span class="bike-name">MALAGA</span>
+                                 <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-lg-4 p-5">
+                                 <img src="../assets/genova-teen.png" alt="">
+                                 <span class="bike-name">GENOVA TEEN</span>
+                                 <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                              </div>
+                              <div class="col-lg-4 p-5">
+                                 <img src="../assets/genova-26.png" alt="">
+                                 <span class="bike-name">GENOVA 26</span>
+                                 <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                              </div>
+                              <div class="col-lg-4 p-5">
+                                 <img src="../assets/malaga.png" alt="">
+                                 <span class="bike-name">MALAGA</span>
+                                 <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="container tab-pane fade" id="ex1-tabs-5" role="tabpanel" aria-labelledby="ex1-tab-5">
+                           Tab 5 content
+                        </div>
+                        <div class="container tab-pane fade" id="ex1-tabs-6" role="tabpanel" aria-labelledby="ex1-tab-6">
+                           Tab 6 content
+                        </div>
+                     <!-- Tabs content -->
+                  </div>
+               </div>
+            </div>
+
+      <!-- cards -->
+      <div class="container mt-5 mb-5 img-cards">
+         <div class="row">
+            <div class="col-lg-4">
+               <div id="box1">
+                  <a href="#">
+                  <img src="../assets/bikes-montadas.png" alt="">
+                  </a>
+               </div>
+            </div>
+            <div class="col-lg-4 pr-0">
+               <div id="box2" class="mb-custom mtmob-3">
+                  <a href="#">
+                  <img src="../assets/garfos.png" alt="">
+                  </a>
+               </div>
+               <div id="box3">
+                  <a href="#">
+                  <img src="../assets/suportes.png" alt="">
+                  </a>
+               </div>
+            </div>
+            <div class="col-lg-4 pl-0">
+               <div id="box2" class="mb-custom mtmob-3">
+                  <a href="#">
+                  <img src="../assets/quadros.png" alt="">
+                  </a>
+               </div>
+               <div id="box3">
+                  <a href="#">
+                  <img src="../assets/paralamas.png" alt="">
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- banner full width -->
+      <div class="container-fluid mt-5 mb-5 p-0">
+         <img src="../assets/Banner-Representantes-V1.png" alt="" width="100%">
+      </div>
+      <div class="container representantes mt-5 mb-5" id="representantes">
+         <h4 class="text-center mb-5">REPRESENTANTES</h4>
+         <div class="row">
+            <div class="col-lg-4">
+               <img src="http://www.clker.com/cliparts/e/t/u/R/t/I/mapa-do-brasil-cinza.svg.hi.png" alt="" width="60%">
+            </div>
+            <div class="col-lg-3">
+               <p>Escolha na lista abaixo o Estado desejado para encontrar nossos Representantes</p>
+               Estado: 
+               <select id="estado" name="estado">
+                  <option value="AC">Acre</option>
+                  <option value="AL">Alagoas</option>
+                  <option value="AP">Amapá</option>
+                  <option value="AM">Amazonas</option>
+                  <option value="BA">Bahia</option>
+                  <option value="CE">Ceará</option>
+                  <option value="DF">Distrito Federal</option>
+                  <option value="ES">Espírito Santo</option>
+                  <option value="GO">Goiás</option>
+                  <option value="MA">Maranhão</option>
+                  <option value="MT">Mato Grosso</option>
+                  <option value="MS">Mato Grosso do Sul</option>
+                  <option value="MG">Minas Gerais</option>
+                  <option value="PA">Pará</option>
+                  <option value="PB">Paraíba</option>
+                  <option value="PR">Paraná</option>
+                  <option value="PE">Pernambuco</option>
+                  <option value="PI">Piauí</option>
+                  <option value="RJ">Rio de Janeiro</option>
+                  <option value="RN">Rio Grande do Norte</option>
+                  <option value="RS">Rio Grande do Sul</option>
+                  <option value="RO">Rondônia</option>
+                  <option value="RR">Roraima</option>
+                  <option value="SC">Santa Catarina</option>
+                  <option value="SP" selected>São Paulo</option>
+                  <option value="SE">Sergipe</option>
+                  <option value="TO">Tocantins</option>
+                  <option value="EX">Estrangeiro</option>
+               </select>
+            </div>
+            <div class="col-lg-5">
+               <p>Cidade de São Paulo, Grande São Paulo e 
+                  Vale do Paraíba 
+               </p>
+               <p>Daniel Representações</p>
+               <ul>
+                  <li>(11) 4970-9645</li>
+                  <li>(11) 4970-9645(tim)</li>
+                  <li>(11) 4970-9645(vivo)</li>
+               </ul>
+               <p>daniel_rodrigues@hotmail.com</p>
+            </div>
+         </div>
+      </div>
+      <footer id="contatos" class="pt-1" style="background-color: #f3f3f3;">
+         <div class="container-fluid pb-5 pt-5">
+            <div class="container pt-3">
+               <div class="row">
+                  <div class="col-lg-6 mb-5">
+                     <h5>NOS ENVIE SUA MENSAGEM</h5>
+                     <p>Utilize o formulário abaixo, para nos enviar suas dúvidas,
+                        críticas ou sugestões. Aguardamos por você!
+                     </p>
+                     <form>
+                        <input type="text" class="form-control" id="nome" placeholder="Nome Completo">
+                        <input type="text" class="form-control" id="empresa" placeholder="Empresa">
+                        <input type="text" class="form-control" id="cargo" placeholder="Cargo">
+                        <input type="text" class="form-control" id="cidade" placeholder="Cidade">
+                        <input type="text" class="form-control" id="uf" placeholder="UF">
+                        <input type="text" class="form-control" id="celular" placeholder="Celular">
+                        <input type="text" class="form-control" id="whatsapp" placeholder="WhatsApp">
+                        <input type="email" class="form-control" id="email" placeholder="Email">
+                        <input type="text" class="form-control" id="mensagem" placeholder="Mensagem">
+                        <button type="submit" class="btn btn-primary mt-2">Enviar</button>
+                     </form>
+                  </div>
+                  <div class="col-lg-2"></div>
+                  <div class="col-lg-4">
+                     <img src="../../assets/logo.png" alt="" width="20%" class="mb-4">
+                     <div class="informations mb-2">
+                        <p>(11) 4970-9645(tim)</p>
+                        <p>(11) 4970-9645(vivo)</p>
+                        <p>comercial@wrp.com.br</p>
+                     </div>
+                     <div class="address mb-4">
+                        <p>Rua do Aluminio, 59 - Bairro Corredor</p>
+                        <p>Itaquaquecetuba - São Paulo</p>
+                        <p>CEP: 08566-220</p>
+                     </div>
+                     <img src="../../assets/celack.png" alt="" width="15%" class="mb-4">
+                     <p class="medium">1ª Empresa do Setor no Brasil certificada,
+                        atendendo à Norma ABNT NBR 14714. 
+                     </p>
+                     <p class="medium">Empresa Certificada pela Celack, atendendo
+                        as exigências da Portaria 656/2012 do INMETRO
+                        para componentes de bicicleta de uso adulto.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+
+      <script>
+         var flat = $("#flat").flipster({
+             style: 'flat',
+             spacing: -0.38,
+             buttons: true,
+             nav: true
+         });
+         
+         $('.nav-tabs').scrollingTabs({
+           bootstrapVersion: 5
+         });
+      </script>
+      <!-- JQuery -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <!-- Bootstrap tooltips -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+      <!-- Bootstrap core JavaScript -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+      <!-- MDB core JavaScript -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      <!-- Option 1: Bootstrap Bundle with Popper -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   </body>
+</html>
