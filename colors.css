@@ -1,0 +1,14 @@
+.pink {
+    background: pink;
+}
+.pink-and-black {
+    border-top:20px solid pink;
+    border-right:20px solid black;
+}
+.red-and-black {
+    border-top:20px solid red;
+    border-right:20px solid black;
+}
+.violet {
+    background: violet;
+}

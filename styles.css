@@ -8,15 +8,6 @@ body {
 div#navbarSupportedContent {
     margin-top: -24px;
 }
-.nav-tabs {
-    justify-content: center;
-    background: #f3f3f3;
-    border-bottom: transparent!important;
-    overflow-x: auto;
-    overflow-y: hidden;
-    display: -webkit-box;
-    display: -moz-box;
-}
 .bg-nav {
     background-color: #f3f3f3;
 }
@@ -32,6 +23,9 @@ a.nav-link.active {
     background: #c50c1c;
     border-radius: 0 0 8px 8px;
 }
+a.nav-link.active.text-white {
+    color: #fff!important;
+}
 .nav-link {
     color: #000;
 }
@@ -43,15 +37,6 @@ li.nav-item {
 }
 .nav-link:hover {
     color: #000!important;
-}
-.nav-tabs .nav-link.active {
-    color: #000!important;
-    background-color: #fff;
-    border-color: #fff;
-}
-.nav-tabs button {
-    color: #000;
-    font-weight: bold;
 }
 .carousel-control-prev-icon {
     background-image: url(assets/arrow-left.png)!important;
@@ -97,13 +82,8 @@ a.saiba-mais {
     font-weight: 500;
     text-decoration: none;
 }
-.nav-tabs button:nth-of-type(2)::after, .nav-tabs button:nth-of-type(3)::after {
-    content: "";
-    border-right: 3px solid #c50c1c;
-    margin-left: 16px;
-}
-.nav-tabs .carousel-control-next-icon {
-    margin: 8px 0;
+a.saiba-mais:hover {
+    color: #eb182b;
 }
 .carousel {
     background: #f3f3f3;
@@ -227,6 +207,35 @@ li.flipster__nav__item.flipster__nav__item--current:after {
     opacity: 1;
 }
 
+/* tabs1 */
+/* .nav-tabs {
+    justify-content: center;
+    background: #f3f3f3;
+    border-bottom: transparent!important;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: -webkit-box;
+    display: -moz-box;
+}
+.nav-tabs .nav-link.active {
+    color: #000!important;
+    background-color: #fff;
+    border-color: #fff;
+}
+.nav-tabs button:nth-of-type(2)::after, .nav-tabs button:nth-of-type(3)::after {
+    content: "";
+    border-right: 3px solid #c50c1c;
+    margin-left: 16px;
+}
+.nav-tabs .carousel-control-next-icon {
+    margin: 8px 0;
+}
+.nav-tabs button {
+    color: #000;
+    font-weight: bold;
+} */
+
+
 /* tabs */
 .scrtabs-tab-scroll-arrow.scrtabs-tab-scroll-arrow-left:before {
     content: "<";
@@ -241,7 +250,6 @@ li.flipster__nav__item.flipster__nav__item--current:after {
     line-height: 0;
     color: #000;
     font-weight: bold;
-    margin-left: 15px;
 }
 a.nav-link {
     color: #000;
@@ -278,3 +286,55 @@ ul.nav-tabs li a.nav-link {
     background: #fff;
 }
 /* tabs */
+
+
+/* breadcrumb */
+#breadcrumb {
+    background: #f3f3f3;
+}
+li.breadcrumb-item a {
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+}
+
+/* detalhes-produto */
+#detalhes-produto {
+    background: #f3f3f3;
+    padding: 2rem 0;
+}
+#detalhes-produto img {
+    max-width: 100%;
+}
+.nav-pills .nav-link.active {
+    color: #fff;
+    background-color: #fff!important;
+}
+#v-pills-tab button {
+    width: 100%;
+}
+.flex-column {
+    align-items: end;
+    margin-right: 1rem;
+} 
+div#v-pills-tab {
+    width: 100px;
+    height: 800px;
+    justify-content: center;
+}
+.product-details span {
+    display: block;
+    font-size: 14px;
+}
+span.text-bold {
+    font-weight: 500;
+    display: initial;
+}
+h5.text-red {
+    color: #c50c1c;
+}
+ul.colors-group span {
+    width: 20px;
+    height: 20px;
+    margin: 8px 0;
+}
