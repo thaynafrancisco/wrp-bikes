@@ -172,7 +172,7 @@ button.btn.btn-primary {
     z-index: 999;
     margin-left: 42%!important;
 }
-a.flipster__nav__link {
+a.flipster__nav__link, a.flipster__nav__link:hover {
     color: transparent;
 }
 .carousel-fliper {
