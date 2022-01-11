@@ -135,7 +135,6 @@ a.saiba-mais:hover {
         left: 5%;
     }
     .container.product-details {
-        padding: 8px;
         padding-top: 2rem;
     }
     #v-pills-tab button {
@@ -264,6 +263,7 @@ li.breadcrumb-item a {
 }
 div#v-pills-tabContent {
     background: #fff;
+    border-radius: 4px;
 }
 #detalhes-produto img {
     max-width: 100%;
