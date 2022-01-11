@@ -4,23 +4,26 @@
       <!-- Required meta tags -->
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      
       <!-- Favicon -->
       <link rel="icon" type="image/png" href="assets/favicon.ico">
+      
       <!-- CSS -->
       <link rel="stylesheet" href="./styles/styles.css">
+      
       <!-- Bootstrap CSS -->
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      
       <!-- Font Montserrat -->
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+      
       <!-- Fliper -->
       <link rel="stylesheet" href="./dist/jquery.flipster.min.css">
       <script src="./dist/jquery.min.js"></script>
       <script src="./dist/jquery.flipster.min.js"></script>
-      <!-- Scrolling Tabs -->
-      <link rel="stylesheet" href="./dist/jquery.scrolling-tabs.min.css">
-      <script src="./dist/jquery.scrolling-tabs.min.js"></script>
+      
       <title>WRP</title>
    </head>
    <body>
@@ -106,235 +109,128 @@
          </div>
       </div>
 
-      <!-- TABS -->
-      <div class="container-fluid" style="background-color: #f3f3f3;">
+      <!-- tabs -->
+      <div class="nav-tabs-container">
          <div class="row justify-content-md-center">
-               <div class="multi-carousel col-lg-6">
-                  <!-- Tabs navs -->
-                  <!--  d-block for showing tabs in carousel with fixed width,  d-md-flex to show all tabs on specific viewport  -->
-                  <ul class="multi-carousel-inner nav nav-tabs mb-3  d-block d-md-flex" id="ex1" role="tablist">
-                     <li class="nav-item multi-carousel-item" role="presentation">
-                        <a
-                           class="nav-link active"
-                           id="ex1-tab-1"
-                           data-toggle="tab"
-                           href="#ex1-tabs-1"
-                           role="tab"
-                           aria-controls="ex1-tabs-1"
-                           aria-selected="true"
-                           >TRANSPORTE</a>
-                     </li>
-                     <li class="nav-item  multi-carousel-item" role="presentation">
-                        <a
-                           class="nav-link"
-                           id="ex1-tab-2"
-                           data-toggle="tab"
-                           href="#ex1-tabs-2"
-                           role="tab"
-                           aria-controls="ex1-tabs-2"
-                           aria-selected="false"
-                           >CARGA PESADA</a>
-                     </li>
-                     <li class="nav-item multi-carousel-item" role="presentation">
-                        <a
-                           class="nav-link"
-                           id="ex1-tab-3"
-                           data-toggle="tab"
-                           href="#ex1-tabs-3"
-                           role="tab"
-                           aria-controls="ex1-tabs-3"
-                           aria-selected="false"
-                           >FULL SUSPENSION</a>
-                     </li>
-                     <li class="nav-item multi-carousel-item" role="presentation">
-                        <a
-                           class="nav-link"
-                           id="ex1-tab-4"
-                           data-toggle="tab"
-                           href="#ex1-tabs-4"
-                           role="tab"
-                           aria-controls="ex1-tabs-4"
-                           aria-selected="true"
-                           >FREIO A DISCO</a>
-                     </li>
-                     <li class="nav-item multi-carousel-item" role="presentation">
-                        <a
-                           class="nav-link"
-                           id="ex1-tab-5"
-                           data-toggle="tab"
-                           href="#ex1-tabs-5"
-                           role="tab"
-                           aria-controls="ex1-tabs-5"
-                           aria-selected="false"
-                           >Tab 5</a>
-                     </li>
-                     <li class="nav-item multi-carousel-item" role="presentation">
-                        <a
-                           class="nav-link"
-                           id="ex1-tab-6"
-                           data-toggle="tab"
-                           href="#ex1-tabs-6"
-                           role="tab"
-                           aria-controls="ex1-tabs-6"
-                           aria-selected="false"
-                           >Tab 6</a>
-                     </li>
-                  </ul>
+            <div class="col-lg-12">
+               <nav>
+                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                  <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">TRANSPORTE</button>
+                  <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">CARGA PESADA</button>
+                  <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">FULL SUSPENSION</button>
+                  <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">FREIO A DISCO</button>
+                  </div>
+               </nav>
+               <div class="tab-content mb-2" id="nav-tabContent">
+                  <div class="container tab-pane fade show active mt-2" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                     <div class="row">
+                        <div class="col-lg-4 p-5">
+                           <img src="assets/genova-teen.png" alt="">
+                           <span class="bike-name">GENOVA TEEN</span>
+                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                        </div>
+                        <div class="col-lg-4 p-5">
+                           <img src="assets/genova-26.png" alt="">
+                           <span class="bike-name">GENOVA 26</span>
+                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                        </div>
+                        <div class="col-lg-4 p-5">
+                           <img src="assets/malaga.png" alt="">
+                           <span class="bike-name">MALAGA</span>
+                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-lg-4 p-5">
+                           <img src="assets/genova-teen.png" alt="">
+                           <span class="bike-name">GENOVA TEEN</span>
+                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                        </div>
+                        <div class="col-lg-4 p-5">
+                           <img src="assets/genova-26.png" alt="">
+                           <span class="bike-name">GENOVA 26</span>
+                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                        </div>
+                        <div class="col-lg-4 p-5">
+                           <img src="assets/malaga.png" alt="">
+                           <span class="bike-name">MALAGA</span>
+                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="container tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                     <div class="row">
+                        <div class="col-lg-4 p-5">
+                           <img src="assets/genova-teen.png" alt="">
+                           <span class="bike-name">GENOVA TEEN</span>
+                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                        </div>
+                        <div class="col-lg-4 p-5">
+                           <img src="assets/genova-26.png" alt="">
+                           <span class="bike-name">GENOVA 26</span>
+                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                        </div>
+                        <div class="col-lg-4 p-5">
+                           <img src="assets/malaga.png" alt="">
+                           <span class="bike-name">MALAGA</span>
+                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-lg-4 p-5">
+                           <img src="assets/genova-teen.png" alt="">
+                           <span class="bike-name">GENOVA TEEN</span>
+                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                        </div>
+                        <div class="col-lg-4 p-5">
+                           <img src="assets/genova-26.png" alt="">
+                           <span class="bike-name">GENOVA 26</span>
+                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                        </div>
+                        <div class="col-lg-4 p-5">
+                           <img src="assets/malaga.png" alt="">
+                           <span class="bike-name">MALAGA</span>
+                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="container tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                     <div class="row">
+                        <div class="col-lg-4 p-5">
+                           <img src="assets/genova-teen.png" alt="">
+                           <span class="bike-name">GENOVA TEEN</span>
+                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                        </div>
+                        <div class="col-lg-4 p-5">
+                           <img src="assets/genova-26.png" alt="">
+                           <span class="bike-name">GENOVA 26</span>
+                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                        </div>
+                        <div class="col-lg-4 p-5">
+                           <img src="assets/malaga.png" alt="">
+                           <span class="bike-name">MALAGA</span>
+                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-lg-4 p-5">
+                           <img src="assets/genova-teen.png" alt="">
+                           <span class="bike-name">GENOVA TEEN</span>
+                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                        </div>
+                        <div class="col-lg-4 p-5">
+                           <img src="assets/genova-26.png" alt="">
+                           <span class="bike-name">GENOVA 26</span>
+                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                        </div>
+                        <div class="col-lg-4 p-5">
+                           <img src="assets/malaga.png" alt="">
+                           <span class="bike-name">MALAGA</span>
+                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
+                        </div>
+                     </div>
+                  </div>
                </div>
-               
-               <!-- Tabs content -->
-               <div class="tab-content" id="ex1-content">
-                  <div class="container tab-pane fade show active" id="ex1-tabs-1" role="tabpanel" aria-labelledby="ex1-tab-1">
-                     <div class="row">
-                        <div class="col-lg-4 p-5">
-                           <img src="assets/genova-teen.png" alt="">
-                           <span class="bike-name">GENOVA TEEN</span>
-                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
-                        </div>
-                        <div class="col-lg-4 p-5">
-                           <img src="assets/genova-26.png" alt="">
-                           <span class="bike-name">GENOVA 26</span>
-                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
-                        </div>
-                        <div class="col-lg-4 p-5">
-                           <img src="assets/malaga.png" alt="">
-                           <span class="bike-name">MALAGA</span>
-                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
-                        </div>
-                     </div>
-                     <div class="row">
-                        <div class="col-lg-4 p-5">
-                           <img src="assets/genova-teen.png" alt="">
-                           <span class="bike-name">GENOVA TEEN</span>
-                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
-                        </div>
-                        <div class="col-lg-4 p-5">
-                           <img src="assets/genova-26.png" alt="">
-                           <span class="bike-name">GENOVA 26</span>
-                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
-                        </div>
-                        <div class="col-lg-4 p-5">
-                           <img src="assets/malaga.png" alt="">
-                           <span class="bike-name">MALAGA</span>
-                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="container tab-pane fade" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
-                     <div class="row">
-                        <div class="col-lg-4 p-5">
-                           <img src="assets/genova-teen.png" alt="">
-                           <span class="bike-name">GENOVA TEEN</span>
-                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
-                        </div>
-                        <div class="col-lg-4 p-5">
-                           <img src="assets/genova-26.png" alt="">
-                           <span class="bike-name">GENOVA 26</span>
-                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
-                        </div>
-                        <div class="col-lg-4 p-5">
-                           <img src="assets/malaga.png" alt="">
-                           <span class="bike-name">MALAGA</span>
-                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
-                        </div>
-                     </div>
-                     <div class="row">
-                        <div class="col-lg-4 p-5">
-                           <img src="assets/genova-teen.png" alt="">
-                           <span class="bike-name">GENOVA TEEN</span>
-                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
-                        </div>
-                        <div class="col-lg-4 p-5">
-                           <img src="assets/genova-26.png" alt="">
-                           <span class="bike-name">GENOVA 26</span>
-                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
-                        </div>
-                        <div class="col-lg-4 p-5">
-                           <img src="assets/malaga.png" alt="">
-                           <span class="bike-name">MALAGA</span>
-                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="container tab-pane fade" id="ex1-tabs-3" role="tabpanel" aria-labelledby="ex1-tab-3">
-                     <div class="row">
-                        <div class="col-lg-4 p-5">
-                           <img src="assets/genova-teen.png" alt="">
-                           <span class="bike-name">GENOVA TEEN</span>
-                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
-                        </div>
-                        <div class="col-lg-4 p-5">
-                           <img src="assets/genova-26.png" alt="">
-                           <span class="bike-name">GENOVA 26</span>
-                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
-                        </div>
-                        <div class="col-lg-4 p-5">
-                           <img src="assets/malaga.png" alt="">
-                           <span class="bike-name">MALAGA</span>
-                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
-                        </div>
-                     </div>
-                     <div class="row">
-                        <div class="col-lg-4 p-5">
-                           <img src="assets/genova-teen.png" alt="">
-                           <span class="bike-name">GENOVA TEEN</span>
-                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
-                        </div>
-                        <div class="col-lg-4 p-5">
-                           <img src="assets/genova-26.png" alt="">
-                           <span class="bike-name">GENOVA 26</span>
-                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
-                        </div>
-                        <div class="col-lg-4 p-5">
-                           <img src="assets/malaga.png" alt="">
-                           <span class="bike-name">MALAGA</span>
-                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="container tab-pane fade" id="ex1-tabs-4" role="tabpanel" aria-labelledby="ex1-tab-4">
-                     <div class="row">
-                        <div class="col-lg-4 p-5">
-                           <img src="assets/genova-teen.png" alt="">
-                           <span class="bike-name">GENOVA TEEN</span>
-                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
-                        </div>
-                        <div class="col-lg-4 p-5">
-                           <img src="assets/genova-26.png" alt="">
-                           <span class="bike-name">GENOVA 26</span>
-                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
-                        </div>
-                        <div class="col-lg-4 p-5">
-                           <img src="assets/malaga.png" alt="">
-                           <span class="bike-name">MALAGA</span>
-                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
-                        </div>
-                     </div>
-                     <div class="row">
-                        <div class="col-lg-4 p-5">
-                           <img src="assets/genova-teen.png" alt="">
-                           <span class="bike-name">GENOVA TEEN</span>
-                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
-                        </div>
-                        <div class="col-lg-4 p-5">
-                           <img src="assets/genova-26.png" alt="">
-                           <span class="bike-name">GENOVA 26</span>
-                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
-                        </div>
-                        <div class="col-lg-4 p-5">
-                           <img src="assets/malaga.png" alt="">
-                           <span class="bike-name">MALAGA</span>
-                           <a href="./produtos/malaga.html" target="_blank" class="saiba-mais">[+] Saiba Mais</a>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="container tab-pane fade" id="ex1-tabs-5" role="tabpanel" aria-labelledby="ex1-tab-5">
-                     Tab 5 content
-                  </div>
-                  <div class="container tab-pane fade" id="ex1-tabs-6" role="tabpanel" aria-labelledby="ex1-tab-6">
-                     Tab 6 content
-                  </div>
-               <!-- Tabs content -->
             </div>
          </div>
       </div>
@@ -487,10 +383,6 @@
              spacing: -0.38,
              buttons: true,
              nav: true
-         });
-         
-         $('.nav-tabs').scrollingTabs({
-           bootstrapVersion: 5
          });
       </script>
       <!-- JQuery -->
