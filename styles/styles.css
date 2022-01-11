@@ -134,7 +134,7 @@ a.saiba-mais:hover {
     .mobile {
         display: block!Important;
    }
-    /* div#v-pills-tab {
+    div#v-pills-tab {
         position: absolute;
         width: 70px!Important;
         height: 20px!important;
@@ -145,7 +145,10 @@ a.saiba-mais:hover {
     #v-pills-tab button {
         border: 1px solid #c20e1a!Important;
         margin: 0 1px;
-    } */
+    }
+    .representantes .col-lg-3 {
+        border-right: initial;
+    }
 }
 
 
