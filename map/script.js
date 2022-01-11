@@ -1,3 +1,49 @@
+// map behaviour
+
+$(document).ready(function(){
+
+//hides dropdown content
+$(".fed").hide();
+
+//unhides first option content
+$("#option1").show();
+
+//listen to dropdown for change
+$("#estado").change(function(){
+//rehide content on change
+$('.fed').hide();
+//unhides current item
+$('#'+$(this).val()).show();
+});
+
+});
+
+jQuery(document).ready(function () {
+   jQuery("#vmap").vectorMap({
+      map: "brazil_br",
+      onRegionClick: function (element, code, region) {
+      jQuery(".fed").css("display", "none");
+      document.getElementById(code).style.display = "block";
+      },
+      selectedRegions: ["sp"],
+      onRegionSelect: function (event, code, region) {
+      event.preventDefault();
+      },
+      backgroundColor: null,
+      borderColor: "#fff",
+      borderWidth: 2,
+      color: "#aaa",
+      hoverOpacity: 0.5,
+      hoverColor: "#fff",
+      selectedColor: "#c50c1c",
+      enableZoom: false,
+      showTooltip: true,
+      scaleColors: ["#000", "#fff"],
+      normalizeFunction: "polynomial",
+   });
+});
+
+
 /*!
  * JQVMap: jQuery Vector Map Library
  * @author JQVMap <me@peterschmalfeldt.com>
