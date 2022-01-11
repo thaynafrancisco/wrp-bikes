@@ -89,8 +89,8 @@ a.saiba-mais:hover {
 }
 .wrp-icon {
     position: absolute;
-    top: 5px;
-    right: -5px;
+    top: 10%;
+    right: -3%;
 }
 
 .desktop {
@@ -128,15 +128,26 @@ a.saiba-mais:hover {
    }
     div#v-pills-tab {
         position: absolute;
-        width: 70px!Important;
-        height: 20px!important;
-        right: 50%;
+        width: 30px!Important;
+        height: 15px!important;
         z-index: 999999;
-        bottom: 20%;
+        bottom: 27%;    
+        left: 5%;
+    }
+    div#v-pills-tabContent {
+        background: #fff;
+    }
+    .container.product-details {
+        padding: 8px;
+        padding-top: 2rem;
     }
     #v-pills-tab button {
-        border: 1px solid #c20e1a!Important;
-        margin: 0 1px;
+        border: 1px solid #000!Important;
+        margin: 2px;
+        padding: 2px;
+    }
+    span.wrp-icon {
+        left: 33%;
     }
 }
 
@@ -272,6 +283,11 @@ div#v-pills-tab {
     width: 100px;
     height: 800px;
     justify-content: center;
+}
+.container .product-details {
+    background: #fff;
+    padding-bottom: 1rem;
+    border-radius: 0 0 8px 8px;
 }
 .product-details span {
     display: block;
