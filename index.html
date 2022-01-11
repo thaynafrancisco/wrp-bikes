@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt">
    <head>
       <!-- Required meta tags -->
       <meta charset="utf-8">
@@ -23,8 +23,15 @@
       <link rel="stylesheet" href="./dist/jquery.flipster.min.css">
       <script src="./dist/jquery.min.js"></script>
       <script src="./dist/jquery.flipster.min.js"></script>
+
+      <!-- Map Path -->
+      <link rel="stylesheet" href="map/styles.css">
+      <link href="map/jqvmap.css" media="screen" rel="stylesheet" type="text/css"/>
+      <script src="map/script.js"></script>
+      <script type="text/javascript" src="map/jquery.vmap.js"></script>
+      <script type="text/javascript" src="map/maps/jquery.vmap.brazil.js" charset="utf-8"></script>
       
-      <title>WRP</title>
+      <title>WRP Bikes</title>
    </head>
    <body>
       <nav class="navbar navbar-expand-lg navbar-light bg-nav">
@@ -55,7 +62,7 @@
          </div>
       </nav>
 
-      <!-- carousel -->
+      <!-- carousel desktop -->
       <div class="container-fluid carousel-fliper desktop" style="background-color: #f3f3f3;">
          <div class="row">
             <div class="col-lg-12 col-sm-12">
@@ -108,6 +115,29 @@
             </div>
          </div>
       </div>
+
+      <!-- carousel mobile -->
+       <div id="carouselBikes" class="carousel slide mobile pt-5 pb-5" data-bs-ride="carousel">
+         <div class="carousel-inner">
+           <div class="carousel-item active">
+             <img src="assets/rbx-26.png" class="d-block" alt="...">
+           </div>
+           <div class="carousel-item">
+             <img src="assets/rbx-26.png" class="d-block" alt="...">
+           </div>
+           <div class="carousel-item">
+             <img src="assets/rbx-26.png" class="d-block" alt="...">
+           </div>
+         </div>
+         <button class="carousel-control-prev" type="button" data-bs-target="#carouselBikes" data-bs-slide="prev">
+           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+           <span class="visually-hidden">Previous</span>
+         </button>
+         <button class="carousel-control-next" type="button" data-bs-target="#carouselBikes" data-bs-slide="next">
+           <span class="carousel-control-next-icon" aria-hidden="true"></span>
+           <span class="visually-hidden">Next</span>
+         </button>
+       </div>
 
       <!-- tabs -->
       <div class="nav-tabs-container">
@@ -271,64 +301,890 @@
             </div>
          </div>
       </div>
+      
       <!-- banner full width -->
       <div class="container-fluid mt-5 mb-5 p-0">
          <img src="./assets/Banner-Representantes-V1.png" alt="" width="100%">
       </div>
+
+      <!-- representantes -->
       <div class="container representantes mt-5 mb-5" id="representantes">
          <h4 class="text-center mb-5">REPRESENTANTES</h4>
          <div class="row">
-            <div class="col-lg-4">
-               <img src="http://www.clker.com/cliparts/e/t/u/R/t/I/mapa-do-brasil-cinza.svg.hi.png" alt="" width="60%">
+            <div id="vmap" style="width: 50%; float: left; height: 550px"></div>
+            <div id="ac" class="fed" style="float: left; width: 40%; padding: 13% 0 0 4%">
+               <div id="ResultadoBusca_1" style="display: block; float: left; width: 100%">
+                  <div style="width: 100%; float: left; padding: 0 0 20px 0" class="Texto">
+                     <h2 class="title">
+                        Acre
+                     </h2>
+                     <p>
+                        <strong>Ailton Guimarães e Felipe Guimarães</strong><br />
+                        <strong>Tel:</strong> 69-3422-2040<br />
+                        <strong>Cel:</strong> 69-99974-2058 | 68-99997-0201<br />
+                        <strong>E-mails:</strong> guimaraes@guimaraesrep.com.br |
+                        ailtonguimaraes@guimaraesrep.com.br
+                     </p>
+                  </div>
+               </div>
             </div>
-            <div class="col-lg-3">
-               <p>Escolha na lista abaixo o Estado desejado para encontrar nossos Representantes</p>
-               Estado: 
-               <select id="estado" name="estado">
-                  <option value="AC">Acre</option>
-                  <option value="AL">Alagoas</option>
-                  <option value="AP">Amapá</option>
-                  <option value="AM">Amazonas</option>
-                  <option value="BA">Bahia</option>
-                  <option value="CE">Ceará</option>
-                  <option value="DF">Distrito Federal</option>
-                  <option value="ES">Espírito Santo</option>
-                  <option value="GO">Goiás</option>
-                  <option value="MA">Maranhão</option>
-                  <option value="MT">Mato Grosso</option>
-                  <option value="MS">Mato Grosso do Sul</option>
-                  <option value="MG">Minas Gerais</option>
-                  <option value="PA">Pará</option>
-                  <option value="PB">Paraíba</option>
-                  <option value="PR">Paraná</option>
-                  <option value="PE">Pernambuco</option>
-                  <option value="PI">Piauí</option>
-                  <option value="RJ">Rio de Janeiro</option>
-                  <option value="RN">Rio Grande do Norte</option>
-                  <option value="RS">Rio Grande do Sul</option>
-                  <option value="RO">Rondônia</option>
-                  <option value="RR">Roraima</option>
-                  <option value="SC">Santa Catarina</option>
-                  <option value="SP" selected>São Paulo</option>
-                  <option value="SE">Sergipe</option>
-                  <option value="TO">Tocantins</option>
-                  <option value="EX">Estrangeiro</option>
-               </select>
+      
+            <div id="ro" class="fed" style="float: left; width: 50%; padding: 13% 0 0 4%; display: none">
+               <div id="ResultadoBusca_1" style="display: block; float: left; width: 100%">
+                  <div style="width: 100%; float: left; padding: 0 0 20px 0" class="Texto">
+                     <h2 class="title">
+                        Rondônia
+                     </h2>
+                     <p>
+                        <strong>Ailton Guimarães e Felipe Guimarães</strong><br />
+                        <strong>Tel:</strong> 69-3422-2040<br />
+                        <strong>Cel:</strong> 69-99974-2058 | 68-99997-0201<br />
+                        <strong>E-mails:</strong> guimaraes@guimaraesrep.com.br |
+                        ailtonguimaraes@guimaraesrep.com.br
+                     </p>
+                  </div>
+               </div>
             </div>
-            <div class="col-lg-5">
-               <p>Cidade de São Paulo, Grande São Paulo e 
-                  Vale do Paraíba 
-               </p>
-               <p>Daniel Representações</p>
-               <ul>
-                  <li>(11) 4970-9645</li>
-                  <li>(11) 4970-9645(tim)</li>
-                  <li>(11) 4970-9645(vivo)</li>
-               </ul>
-               <p>daniel_rodrigues@hotmail.com</p>
+      
+            <div
+               id="al"
+               class="fed"
+               style="float: left; width: 50%; padding: 13% 0 0 4%; display: none"
+               >
+               <div
+                  id="ResultadoBusca_1"
+                  style="display: block; float: left; width: 100%"
+                  >
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        Alagoas
+                     </h2>
+                     <p>
+                        <strong>Edmilson Canel </strong><br />
+                        <strong>Tel:</strong> 82-3375-3074<br />
+                        <strong>Cel:</strong> 82-98815-4872<br />
+                        <strong>E-mail:</strong> edmilsoncanel@hotmail.com
+                     </p>
+                  </div>
+               </div>
             </div>
-         </div>
+            <div
+               id="ap"
+               class="fed"
+               style="float: left; width: 50%; padding: 13% 0 0 4%; display: none"
+               >
+               <div
+                  id="ResultadoBusca_1"
+                  style="display: block; float: left; width: 100%"
+                  >
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        Amapá
+                     </h2>
+                     <p>
+                        <strong>Cléo Ribeiro</strong><br />
+                        <strong>Cel:</strong> 96-99205-9745 | 96-98103-9263 |
+                        96-99141-3739<br />
+                        <strong>E-mail:</strong> cleorepresentacoesltda@gmail.com
+                     </p>
+                  </div>
+               </div>
+            </div>
+      
+            <div
+               id="am"
+               class="fed"
+               style="float: left; width: 50%; padding: 13% 0 0 4%; display: none"
+               >
+               <div
+                  id="ResultadoBusca_1"
+                  style="display: block; float: left; width: 100%"
+                  >
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        Amazonas
+                     </h2>
+                     <p>
+                        <strong>Charles Rodrigues</strong><br />
+                        <strong>Tel:</strong> 92-3233-8868<br />
+                        <strong>Cel:</strong> 92-99250-2058<br />
+                        <strong>E-mail:</strong>
+                        fabiolalencar@yahoo.com.br
+                     </p>
+                  </div>
+               </div>
+            </div>
+      
+            <div
+               id="to"
+               class="fed"
+               style="float: left; width: 50%; padding: 13% 0 0 4%; display: none"
+               >
+               <div
+                  id="ResultadoBusca_1"
+                  style="display: block; float: left; width: 100%"
+                  >
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        Tocantins
+                     </h2>
+                     <p>
+                        <strong>Aroldo Ribeiro</strong><br />
+                        <strong>Cel:</strong> 99-99104-6032 | 99-98107-6224<br />
+                        <strong>E-mail:</strong> uni-vendas1@hotmail.com
+                     </p>
+                  </div>
+               </div>
+            </div>
+      
+            <div
+               id="ba"
+               class="fed"
+               style="float: left; width: 50%; padding: 13% 0 0 4%; display: none"
+               >
+               <div
+                  id="ResultadoBusca_1"
+                  style="display: block; float: left; width: 100%"
+                  >
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        Bahia
+                     </h2>
+                     <p>
+                        <strong>Lando Soares</strong><br />
+                        <strong>Tel:</strong> 71-3379-3311<br />
+                        <strong>Cel:</strong> 71-99117-9140<br />
+                        <strong>E-mail:</strong> lando.vendas@hotmail.com
+                     </p>
+                  </div>
+               </div>
+            </div>
+      
+            <div
+               id="ce"
+               class="fed"
+               style="float: left; width: 50%; padding: 13% 0 0 4%; display: none"
+               >
+               <div
+                  id="ResultadoBusca_1"
+                  style="display: block; float: left; width: 100%"
+                  >
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        Ceará
+                     </h2>
+                     <p>
+                        <strong>Valdelívia Martins</strong><br />
+                        <strong>Tel:</strong> 85-3261-6465<br />
+                        <strong>Cel:</strong> 85-99973-3577<br />
+                        <strong>E-mail:</strong>
+                        casalvinterep@gmail.com
+                     </p>
+                  </div>
+               </div>
+            </div>
+      
+            <div
+               id="pa"
+               class="fed"
+               style="float: left; width: 50%; padding: 13% 0 0 4%; display: none"
+               >
+               <div
+                  id="ResultadoBusca_1"
+                  style="display: block; float: left; width: 100%"
+                  >
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        Pará
+                     </h2>
+                     <p>
+                        <strong>João Batista</strong><br />
+                        <strong>Cel:</strong>
+                        91-98258-4440 | 91-98148-9028
+                        <br />
+                        <strong>E-mail:</strong> vendasjb@live.com
+                     </p>
+                  </div>
+               </div>
+            </div>
+      
+            <div
+               id="ma"
+               class="fed"
+               style="float: left; width: 50%; padding: 13% 0 0 4%; display: none"
+               >
+               <div
+                  id="ResultadoBusca_1"
+                  style="display: block; float: left; width: 100%"
+                  >
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        Maranhão (Imperatriz)
+                     </h2>
+                     <p>
+                        <strong>Gilvan de Oliveira</strong><br />
+                        <strong>Cel:</strong> 99-99977-8441<br />
+                        <strong>E-mail:</strong> dboliveirarep@hotmail.com
+                     </p>
+                     <hr />
+                     <h2 class="title">
+                        Maranhão (São Luís)
+                     </h2>
+                     <p>
+                        <strong>Geová Morais</strong><br />
+                        <strong>Tel:</strong> 98-3225-0861<br />
+                        <strong>Cel:</strong> 98-98704-4066<br />
+                        <strong>E-mail:</strong> geovaabreu@hotmail.com
+                     </p>
+                  </div>
+               </div>
+            </div>
+      
+            <div
+               id="pb"
+               class="fed"
+               style="float: left; width: 50%; padding: 13% 0 0 4%; display: none"
+               >
+               <div
+                  id="ResultadoBusca_1"
+                  style="display: block; float: left; width: 100%"
+                  >
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        Paraiba
+                     </h2>
+                     <p>
+                        <strong>Kleber Martins</strong><br />
+                        <strong>Cel:</strong> 83-98678-4550<br />
+                        <strong>E-mail:</strong> kmartins.representacoes@gmail.com
+                     </p>
+                  </div>
+               </div>
+            </div>
+      
+            <div
+               id="pe"
+               class="fed"
+               style="float: left; width: 50%; padding: 13% 0 0 4%; display: none"
+               >
+               <div
+                  id="ResultadoBusca_1"
+                  style="display: block; float: left; width: 100%"
+                  >
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        Pernambuco
+                     </h2>
+                     <p>
+                        <strong>Ivanildo Soares</strong><br />
+                        <strong>Tel:</strong> 81-3339-2956<br />
+                        <strong>Cel:</strong> 81-99989-1263<br />
+                        <strong>E-mail:</strong> is.andrade@bol.com.br
+                     </p>
+                  </div>
+               </div>
+            </div>
+      
+            <div
+               id="pi"
+               class="fed"
+               style="float: left; width: 50%; padding: 13% 0 0 4%; display: none"
+               >
+               <div
+                  id="ResultadoBusca_1"
+                  style="display: block; float: left; width: 100%"
+                  >
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        Piauí
+                     </h2>
+                     <p>
+                        <strong>Junior Filho</strong><br />
+                        <strong>Tel:</strong> 86-3081-7676<br />
+                        <strong>Cel:</strong> 86-98841-5396<br />
+                        <strong>E-mail:</strong> filhojr2@hotmail.com
+                     </p>
+                  </div>
+               </div>
+            </div>
+      
+            <div
+               id="se"
+               class="fed"
+               style="float: left; width: 50%; padding: 13% 0 0 4%; display: none"
+               >
+               <div
+                  id="ResultadoBusca_1"
+                  style="display: block; float: left; width: 100%"
+                  >
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        Sergipe
+                     </h2>
+                     <p>
+                        <strong>Antônio Sérgio</strong><br />
+                        <strong>Cel:</strong> 79-99139-9785<br />
+                        <strong>E-mail:</strong> schagasrep@hotmail.com
+                     </p>
+                  </div>
+               </div>
+            </div>
+      
+            <div
+               id="df"
+               class="fed"
+               style="float: left; width: 50%; padding: 13% 0 0 4%; display: none"
+               >
+               <div
+                  id="ResultadoBusca_1"
+                  style="display: block; float: left; width: 100%"
+                  >
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        Brasília
+                     </h2>
+                     <p>
+                        <strong>Jackie Rocha</strong><br />
+                        <strong>Cel:</strong> 61-99988-2363<br />
+                        <strong>E-mail:</strong> jackieaaraujo@gmail.com
+                     </p>
+                  </div>
+               </div>
+            </div>
+      
+            <div
+               id="go"
+               class="fed"
+               style="float: left; width: 50%; padding: 13% 0 0 4%; display: none"
+               >
+               <div
+                  id="ResultadoBusca_1"
+                  style="display: block; float: left; width: 100%"
+                  >
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        Goiás
+                     </h2>
+                     <p>
+                        <strong>Marlu Costa</strong><br />
+                        <strong>Cel:</strong> 62-98255-6669<br />
+                        <strong>E-mail:</strong> marlupcosta@hotmail.com
+                     </p>
+                  </div>
+               </div>
+            </div>
+      
+            <div
+               id="mt"
+               class="fed"
+               style="float: left; width: 50%; padding: 13% 0 0 4%; display: none"
+               >
+               <div
+                  id="ResultadoBusca_1"
+                  style="display: block; float: left; width: 100%"
+                  >
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        Mato Grosso
+                     </h2>
+                     <p>
+                        <strong>Eduardo Souza</strong><br />
+                        <strong>Tel:</strong> 65-3028-3702<br />
+                        <strong>Cel:</strong> 65-99290-2066<br />
+                        <strong>E-mail:</strong> representacoes.office@gmail.com
+                     </p>
+                  </div>
+               </div>
+            </div>
+      
+            <div
+               id="es"
+               class="fed"
+               style="float: left; width: 50%; padding: 13% 0 0 4%; display: none"
+               >
+               <div
+                  id="ResultadoBusca_1"
+                  style="display: block; float: left; width: 100%"
+                  >
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        Espírito Santo
+                     </h2>
+                     <p>
+                        <strong>Isaías Oliveira</strong><br />
+                        <strong>Tel:</strong> 27-3233-2200<br />
+                        <strong>Cel:</strong> 27-99961-9515<br />
+                        <strong>E-mail:</strong>
+                        isamar.isaias@uol.com.br
+                     </p>
+                  </div>
+               </div>
+            </div>
+      
+            <div
+               id="mg"
+               class="fed"
+               style="float: left; width: 50%; padding: 13% 0 0 4%; display: none"
+               >
+               <div
+                  id="ResultadoBusca_1"
+                  style="display: block; float: left; width: 100%"
+                  >
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        MG (Belo Horizonte)
+                     </h2>
+                     <p>
+                        <strong>Batista Reis</strong><br />
+                        <strong>Tel:</strong>31-3351-9813<br />
+                        <strong>Cel:</strong>31-99977-8961<br />
+                        <strong>E-mail:</strong> orgreisrep@gmail.com
+                     </p>
+                  </div>
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        MG (Região Norte / Nordeste / Leste)
+                     </h2>
+                     <p>
+                        <strong>Eduardo Cotta</strong><br />
+                        <strong>Tel:</strong>(31) 3452-7000<br />
+                        <strong>Cel:</strong> (31) 99999-3431<br />
+                        <strong>E-mail:</strong> rep.cotta@uol.com.br
+                     </p>
+                  </div>
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        MG (Triângulo Mineiro)
+                     </h2>
+                     <p>
+                        <strong>Rogério Oliveira</strong><br />
+                        <strong>Tel:</strong> (34) 3212-3005<br />
+                        <strong>Cel:</strong> (34) 99971-4681<br />
+                        <strong>E-mail:</strong> rogerio@tobiasepereira.com.br
+                     </p>
+                  </div>
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        MG (Sul de Minas)
+                     </h2>
+                     <p>
+                        <strong>Paulo Sezar</strong><br />
+                        <strong>Cel:</strong> 35-98439-7502 35-99985-0012<br />
+                        <strong>E-mail:</strong> rogerio@tobiasepereira.com.br
+                     </p>
+                  </div>
+               </div>
+            </div>
+      
+            <div
+               id="rj"
+               class="fed"
+               style="float: left; width: 50%; padding: 13% 0 0 4%; display: none"
+               >
+               <div
+                  id="ResultadoBusca_1"
+                  style="display: block; float: left; width: 100%"
+                  >
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        RJ (Baixada / Zona Oeste)
+                     </h2>
+                     <p>
+                        <strong>Antônio Conforte Filho</strong><br />
+                        <strong>Tel:</strong> (21) 3015-3699<br />
+                        <strong>Cel:</strong> (21) 99718-0287<br />
+                        <strong>E-mail:</strong> confortekajoma@gmail.com
+                     </p>
+                  </div>
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        RJ (Niterói )
+                     </h2>
+                     <p>
+                        <strong>Mário Tostes</strong><br />
+                        <strong>Cel:</strong> 21-99718-0287<br />
+                        <strong>E-mail:</strong> mariotostes3@ig.com.br
+                     </p>
+                  </div>
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        RJ (Reg. Serrana / Sul)
+                     </h2>
+                     <p>
+                        <strong>Antônio Teixeira da Silva</strong><br />
+                        <strong>Cel:</strong> (24) 98112-5294<br />
+                        <strong>E-mail:</strong> silvarj.kajoma@gmail.com
+                     </p>
+                  </div>
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        RJ (Rio de Janeiro)
+                     </h2>
+                     <p>
+                        <strong>João Carlos</strong><br />
+                        <strong>Cel:</strong> (21) 96405-0746<br />
+                        <strong>E-mail:</strong> joaocarlosamaral011@gmail.com
+                     </p>
+                  </div>
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        RJ (São Gonçalo)
+                     </h2>
+                     <p>
+                        <strong>Alexandre Castro de Oliveira</strong><br />
+                        <strong>Cel:</strong> (21) 99308-0416<br />
+                        <strong>E-mail:</strong> all.alexandre@ig.com.br
+                     </p>
+                  </div>
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        RJ (Subúrbio)
+                     </h2>
+                     <p>
+                        <strong>Sidney da Silva</strong><br />
+                        <strong>Cel:</strong> (21) 96440-8226<br />
+                        <strong>E-mail:</strong> lbcrepresentacoes@hotmail.com
+                     </p>
+                  </div>
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        RJ (Zona Oeste)
+                     </h2>
+                     <p>
+                        <strong>Fábio Marins</strong><br />
+                        <strong>Cel:</strong> (21) 96459-4166<br />
+                        <strong>E-mail:</strong> fabio.marins@hotmail.com
+                     </p>
+                  </div>
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        RJ (Zona Sul / Centro / Recreio)
+                     </h2>
+                     <p>
+                        <strong>Helder Pessoa</strong><br />
+                        <strong>Cel:</strong> (21) 96447-5791<br />
+                        <strong>E-mail:</strong> hpessoa7@gmail.com
+                     </p>
+                  </div>
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        RJ (Suburbio)
+                     </h2>
+                     <p>
+                        <strong>Sidney da Silva</strong><br />
+                        <strong>Cel:</strong> 21-99760-5066<br />
+                        <strong>E-mail:</strong> lbcrepresentacoes@hotmail.com
+                     </p>
+                  </div>
+               </div>
+            </div>
+      
+            <div
+               id="sp"
+               class="fed"
+               style="float: left; width: 50%; padding: 13% 0 0 4%; display: none"
+               >
+               <div
+                  id="ResultadoBusca_1"
+                  style="display: block; float: left; width: 100%">
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        SP (Vale do Paraíba)
+                     </h2>
+                     <p>
+                        <strong>Fabiano Belo</strong><br />
+                        <strong>Tel:</strong> (12) 3951-0650<br />
+                        <strong>Cel:</strong> (12) 99798-9811<br />
+                        <strong>E-mail:</strong> belo.fabiano@ig.com.br
+                     </p>
+                  </div>
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        SP (Zona Sul)
+                     </h2>
+                     <p>
+                        <strong>Sérgio Alonso</strong><br />
+                        <strong>Tel:</strong> (11) 3637-9609<br />
+                        <strong>Cel:</strong> (11) 99995-1311<br />
+                        <strong>E-mail:</strong> sergio-alonso@uol.com.br
+                     </p>
+                  </div>
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        SP (Litoral Sul)
+                     </h2>
+                     <p>
+                        <strong>Cecília Domingues</strong><br />
+                        <strong>Cel:</strong> 11-98946-9669<br />
+                        <strong>E-mail:</strong> ceciliadomingues9894@gmail.com
+                     </p>
+                  </div>
+               </div>
+            </div>
+      
+            <div
+               id="rs"
+               class="fed"
+               style="float: left; width: 50%; padding: 13% 0 0 4%; display: none"
+               >
+               <div
+                  id="ResultadoBusca_1"
+                  style="display: block; float: left; width: 100%"
+                  >
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        RS (Interior)
+                     </h2>
+                     <p>
+                        <strong>Agenor Pereira</strong><br />
+                        <strong>Tel:</strong> (54) 3028-8443<br />
+                        <strong>Cel:</strong> (54) 99157-2036<br />
+                        <strong>E-mail:</strong> aguepel@terra.com.br
+                     </p>
+                  </div>
+               </div>
+            </div>
+      
+            <div
+               id="sc"
+               class="fed"
+               style="float: left; width: 50%; padding: 13% 0 0 4%; display: none"
+               >
+               <div
+                  id="ResultadoBusca_1"
+                  style="display: block; float: left; width: 100%"
+                  >
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        Santa Catarina
+                     </h2>
+                     <p>
+                        <strong>Adriana Martins</strong><br />
+                        <strong>Tel:</strong> (48) 3344-5219<br />
+                        <strong>Cel:</strong> (48) 9102-9561<br />
+                        <strong>E-mail:</strong> angraum@terra.com.br
+                     </p>
+                  </div>
+               </div>
+            </div>
+      
+            <div
+               id="pr"
+               class="fed"
+               style="float: left; width: 50%; padding: 13% 0 0 4%; display: none"
+               >
+               <div
+                  id="ResultadoBusca_1"
+                  style="display: block; float: left; width: 100%"
+                  >
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        PR (Curitiba)
+                     </h2>
+                     <p>
+                        <strong>Marcos Osti</strong><br />
+                        <strong>Tel:</strong> 41-3256-9602<br />
+                        <strong>Cel:</strong> 48-98804-2225<br />
+                        <strong>E-mail:</strong> osti.marcos@terra.com.br
+                     </p>
+                  </div>
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        PR (Maringá)
+                     </h2>
+                     <p>
+                        <strong>Ademar de Barros</strong><br />
+                        <strong>Tel:</strong> (43) 3325-1911<br />
+                        <strong>Cel:</strong> (43) 9660-1497<br />
+                        <strong>E-mail:</strong> fac@facrepresentacoes.com.br
+                     </p>
+                  </div>
+               </div>
+            </div>
+      
+            <div
+               id="ms"
+               class="fed"
+               style="float: left; width: 50%; padding: 13% 0 0 4%; display: none"
+               >
+               <div
+                  id="ResultadoBusca_1"
+                  style="display: block; float: left; width: 100%"
+                  >
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        Mato Grosso do Sul
+                     </h2>
+                     <p>
+                        <strong
+                           >Entre em contato com a central de atendimento pelo telefone
+                        (21)3636-4500.</strong
+                           >
+                     </p>
+                  </div>
+               </div>
+            </div>
+      
+            <div
+               id="rn"
+               class="fed"
+               style="float: left; width: 50%; padding: 13% 0 0 4%; display: none"
+               >
+               <div
+                  id="ResultadoBusca_1"
+                  style="display: block; float: left; width: 100%"
+                  >
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        Rio Grande do Norte
+                     </h2>
+                     <p>
+                        <strong>Aparecida Lima</strong><br />
+                        <strong>Cel:</strong> 84-98822-6059 | 84-99811-2277<br />
+                        <strong>E-mail:</strong> acessoglobalrn@hotmail.com
+                     </p>
+                  </div>
+               </div>
+            </div>
+      
+            <div
+               id="rr"
+               class="fed"
+               style="float: left; width: 50%; padding: 13% 0 0 4%; display: none">
+               <div
+                  id="ResultadoBusca_1"
+                  style="display: block; float: left; width: 100%"
+                  >
+                  <div
+                     style="width: 100%; float: left; padding: 0 0 20px 0"
+                     class="Texto"
+                     >
+                     <h2 class="title">
+                        Rorâima
+                     </h2>
+                     <p>
+                        <strong>Entre em contato com a central de atendimento pelo telefone (21)3636-4500.</strong>
+                     </p>
+                  </div>
+               </div>
+            </div>
       </div>
+      </div>
+      
       <footer id="contatos" class="pt-1" style="background-color: #f3f3f3;">
          <div class="container-fluid pb-5 pt-5">
             <div class="container pt-3">
@@ -353,7 +1209,7 @@
                   </div>
                   <div class="col-lg-2"></div>
                   <div class="col-lg-4">
-                     <img src="../assets/logo.png" alt="" width="20%" class="mb-4">
+                     <img src="assets/logo.png" alt="" width="20%" class="mb-4">
                      <div class="informations mb-2">
                         <p>(11) 4970-9645(tim)</p>
                         <p>(11) 4970-9645(vivo)</p>
@@ -364,7 +1220,7 @@
                         <p>Itaquaquecetuba - São Paulo</p>
                         <p>CEP: 08566-220</p>
                      </div>
-                     <img src="../assets/celack.png" alt="" width="15%" class="mb-4">
+                     <img src="assets/celack.png" alt="" width="15%" class="mb-4">
                      <p class="medium">1ª Empresa do Setor no Brasil certificada,
                         atendendo à Norma ABNT NBR 14714. 
                      </p>
@@ -385,16 +1241,35 @@
              nav: true
          });
       </script>
-      <!-- JQuery -->
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <!-- Bootstrap tooltips -->
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-      <!-- Bootstrap core JavaScript -->
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-      <!-- MDB core JavaScript -->
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+            <script>
+               jQuery(document).ready(function () {
+                 jQuery("#vmap").vectorMap({
+                   map: "brazil_br",
+                   onRegionClick: function (element, code, region) {
+                     jQuery(".fed").css("display", "none");
+                     document.getElementById(code).style.display = "block";
+                   },
+                   selectedRegions: ["AC"],
+                   onRegionSelect: function (event, code, region) {
+                     event.preventDefault();
+                   },
+                   backgroundColor: null,
+                   borderColor: "#fff",
+                   borderWidth: 2,
+                   borderOpacity: 1,
+                   color: "#aaa",
+                   hoverOpacity: 0.5,
+                   hoverColor: "#000",
+                   selectedColor: "#c50c1c",
+                   enableZoom: false,
+                   showTooltip: true,
+                   scaleColors: ["#000", "#000"],
+                   normalizeFunction: "polynomial",
+                 });
+               });
+            </script>
+      
       <!-- Option 1: Bootstrap Bundle with Popper -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-   </body>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+</body>
 </html>

@@ -107,7 +107,6 @@ a.saiba-mais:hover {
     display: none!important;
 }
 
-
 /* On screens that are 600px or less, set the background color to olive */
 @media screen and (max-width: 600px) {
     .mtmob-3 {
@@ -118,7 +117,7 @@ a.saiba-mais:hover {
         margin: inherit;
    }
     ul.navbar-nav {
-        margin-top: 16px!important;
+        margin-top: 32px!important;
         border: 1px solid #d3d3d3;
         padding-top: 8px;
         border-radius: 4px;
@@ -150,7 +149,6 @@ a.saiba-mais:hover {
         border-right: initial;
     }
 }
-
 
 /* form */
 form input {
@@ -304,4 +302,21 @@ ul.colors-group span {
 ul.colors-group {
     width: 85%;
     flex-wrap: wrap;
+}
+
+
+/* carousel .mobile */
+ol.carousel-indicators li {
+    border: 1px solid #c50c1c;
+    height: 5px;
+    width: 20px;
+    margin: 4px;
+    margin-top: 1rem;
+}
+.carousel-indicators .active {
+    background: #c50c1c;
+}
+#carouselBikes img {
+    width: 75%;
+    margin: 0 auto;
 }
