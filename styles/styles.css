@@ -326,3 +326,31 @@ ol.carousel-indicators li {
     width: 75%;
     margin: 0 auto;
 }
+
+/* scrollbar */
+/* width */
+#representantes ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  #representantes ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  #representantes ::-webkit-scrollbar-thumb {
+    background: #c50c1c; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  #representantes ::-webkit-scrollbar-thumb:hover {
+    background: #c50c1c; 
+  }
+
+  /* representantes */
+  select#estado {
+        border-radius: 4px;
+    }
