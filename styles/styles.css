@@ -1,7 +1,8 @@
-body {
+
+html, body {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
-}
+  }
 .navbar {
     padding-top: 0!important;
 }
@@ -100,7 +101,7 @@ a.saiba-mais:hover {
     display: none!important;
 }
 
-/* On screens that are 600px or less, set the background color to olive */
+/* On screens that are 767px or less, set the background color to olive */
 @media screen and (max-width: 767px) {
     .mtmob-3 {
         margin-top: 1rem;
