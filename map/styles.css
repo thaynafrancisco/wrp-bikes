@@ -73,5 +73,23 @@ h2.title {
 	margin-top: -5px;
 	margin-bottom: 0px;
 	font-size: 18px;
-	color: #000;
+	color: #c50c1c;
+}
+
+/* thayna */
+#vmap {
+	width: 100%; 
+	float: left; 
+	height: 300px;
+	padding: 1rem;
+}
+.fed {
+	float: left; 
+	height: 300px;
+	align-items: center;
+	padding: 1rem;
+	flex-wrap: wrap;
+}
+.fed .texto {
+    margin: 12px 0;
 }
