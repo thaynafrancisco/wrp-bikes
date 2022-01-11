@@ -101,10 +101,10 @@ a.saiba-mais:hover {
 }
 
 .desktop {
-    display: block;
+    display: block!important;
 }
 .mobile {
-    display: none;
+    display: none!important;
 }
 
 
@@ -129,12 +129,25 @@ a.saiba-mais:hover {
         padding: 8px;
    }
     .desktop {
-        display: none;
+        display: none!important;
    }
     .mobile {
-        display: block;
+        display: block!Important;
    }
+    div#v-pills-tab {
+        position: absolute;
+        width: 70px!Important;
+        height: 20px!important;
+        right: 50%;
+        z-index: 999999;
+        bottom: 20%;
+    }
+    #v-pills-tab button {
+        border: 1px solid #c20e1a!Important;
+        margin: 0 1px;
+    }
 }
+
 
 /* form */
 form input {
@@ -258,7 +271,7 @@ li.breadcrumb-item a {
 /* detalhes-produto */
 #detalhes-produto {
     background: #f3f3f3;
-    padding: 2rem 0;
+    padding: 1rem 0;
 }
 #detalhes-produto img {
     max-width: 100%;
