@@ -131,14 +131,14 @@ a.saiba-mais:hover {
         display: block!Important;
    }
    div#v-pills-home {
-        position: relative;
+        position: relative!important;
     }
     div#v-pills-tab {
         position: absolute;
         width: 30px!Important;
         height: 15px!important;
         z-index: 999999;
-        bottom: 10%;    
+        bottom: 0%;    
         left: 8%;
     }
     .container.product-details {
