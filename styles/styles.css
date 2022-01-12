@@ -243,6 +243,9 @@ li.flipster__nav__item.flipster__nav__item--current:after {
     content: "";
     display:none;
   }
+  div#nav-tabContent img {
+    max-width: 100%;
+}
 
 /* tabs */
 
