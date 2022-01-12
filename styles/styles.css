@@ -3,6 +3,9 @@ html, body {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
   }
+a {
+    color: #000;
+}
 .navbar {
     padding-top: 0!important;
 }
