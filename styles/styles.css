@@ -138,14 +138,14 @@ a.saiba-mais:hover {
         width: 30px!Important;
         height: 15px!important;
         z-index: 999999;
-        bottom: 20%;    
+        bottom: 10%;    
         left: 8%;
     }
     .container.product-details {
         padding-top: 2rem;
     }
     #v-pills-tab button {
-        background:#f3f3f3!Important;
+        background:red!Important;
         margin: 2px;
         padding: 2px;
     }
