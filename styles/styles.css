@@ -5,6 +5,7 @@ html, body {
   }
 a {
     color: #000;
+    -webkit-color: #000;
 }
 .navbar {
     padding-top: 0!important;
