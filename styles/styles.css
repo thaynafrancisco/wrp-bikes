@@ -3,7 +3,7 @@ html, body {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
   }
-a, #select option {
+a, #select option, footer {
     color: #000;
     -webkit-color: #000!important;
 }
@@ -97,7 +97,6 @@ a.saiba-mais:hover {
     top: 10%;
     right: -3%;
 }
-
 .desktop {
     display: block!important;
 }
@@ -136,14 +135,14 @@ a.saiba-mais:hover {
         width: 30px!Important;
         height: 15px!important;
         z-index: 999999;
-        bottom: 0%;    
+        bottom: 20%;    
         left: 5%;
     }
     .container.product-details {
         padding-top: 2rem;
     }
     #v-pills-tab button {
-        border: 1px solid #000!Important;
+        background:#f3f3f3!Important;
         margin: 2px;
         padding: 2px;
     }
