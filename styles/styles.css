@@ -130,13 +130,16 @@ a.saiba-mais:hover {
     .mobile {
         display: block!Important;
    }
+   div#v-pills-home {
+        position: relative;
+    }
     div#v-pills-tab {
         position: absolute;
         width: 30px!Important;
         height: 15px!important;
         z-index: 999999;
         bottom: 20%;    
-        left: 5%;
+        left: 8%;
     }
     .container.product-details {
         padding-top: 2rem;
