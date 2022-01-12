@@ -3,9 +3,9 @@ html, body {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
   }
-a {
+a, #select option {
     color: #000;
-    -webkit-color: #000;
+    -webkit-color: #000!important;
 }
 .navbar {
     padding-top: 0!important;
